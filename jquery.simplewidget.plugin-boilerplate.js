@@ -1,9 +1,3 @@
-/*
-***************************************************************
-A lite (non jQueryUI) widget pattern for plugins from @cowboy
-***************************************************************
-*/
-
 /*!
  * jQuery simpleWidget - v0.1pre - 10/28/2010
  * http://benalman.com/

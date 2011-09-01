@@ -1,13 +1,16 @@
-/*
-**************************************************************
-jQueryUI 1.8 widget pattern demonstrating custom event publish/
-subscribe based on http://bit.ly/cKAmDa
+/*!
+ * jQuery custom-events plugin boilerplate
+ * Author: DevPatch
+ * Further changes: @addyosmani
+ * Licensed under the MIT license
+ */
 
+
+/*
 Use jQuery’s custom events to enable publish/speak and subscribe/
 listen into widgets. Each widget would publish certain events and 
 subscribe to others. This approach effectively decouples the widgets 
 and allows them to function independently.
-**************************************************************
 */
 
 (function(){

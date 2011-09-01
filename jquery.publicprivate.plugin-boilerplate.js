@@ -1,9 +1,10 @@
+/*!
+ * jQuery public/private methods plugin boilerplate
+ * Author: @addyosmani
+ * Based on a pattern used by: @cowboy
+ * Licensed under the MIT license
+ */
 
-/*
-*****************************************************
-Light plugin with public/private methods
-*****************************************************
-*/
 
 ;(function($, undefined){
   

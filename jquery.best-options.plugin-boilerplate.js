@@ -1,10 +1,16 @@
+/*!
+ * jQuery 'best options' plugin boilerplate
+ * Author: @cowboy
+ * Further changes: @addyosmani
+ * Licensed under the MIT license
+ */
+
+
 /*
-**********************************************************
 A distilled template based on @cowboys jQuery pluginization
 'best options' tip where options can be overridden both globally 
 and per-call. Thanks to @mathias for reminding me about the 
 pattern.
-**********************************************************
 */
 
 (function ($, undefined) {

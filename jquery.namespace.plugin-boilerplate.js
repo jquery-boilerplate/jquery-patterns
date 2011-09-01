@@ -1,8 +1,9 @@
-/*
-***********************************************
-Namespaced Starter Template from @dougneiner
-***********************************************
-*/
+/*!
+ * jQuery namespaced 'Starter' plugin boilerplate
+ * Author: @dougneiner
+ * Licensed under the MIT license
+ */
+
 (function ($) {
     if (!$.myNamespace) {
         $.myNamespace = new Object();

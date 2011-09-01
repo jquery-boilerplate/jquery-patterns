@@ -1,9 +1,9 @@
-/*
-**********************************************************
-Plugin boilerplate from @ajpiano with a minor adjustments
-by @addyosmani
-**********************************************************
-*/
+/*!
+ * jQuery lightweight plugin boilerplate
+ * Author: @ajpiano
+ * Further changes: @addyosmani
+ * Licensed under the MIT license
+ */
 
 ;(function ($, undefined) {
 

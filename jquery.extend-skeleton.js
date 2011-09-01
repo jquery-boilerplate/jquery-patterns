@@ -1,10 +1,10 @@
-/*
-****************************************************************
-jQuery plugin skeleton using extend pattern 
-by @oscargodson with input from @timmywil
-note: needs comments
-****************************************************************
-*/
+/*!
+ * jQuery extend-based plugin boilerplate
+ * Author: @oscargodson
+ * Further changes: @timmywil
+ * Licensed under the MIT license
+ */
+
 
 ;(function($){
     $.fn.extend({

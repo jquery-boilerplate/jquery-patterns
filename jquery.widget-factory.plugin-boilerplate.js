@@ -1,9 +1,9 @@
-/*
-*******************************************************
-jQueryUI 1.8/9 Widget boilerplate from @addyosmani 
-with input from @peolanha
-*******************************************************
-*/
+/*!
+ * jQuery UI Widget-factory plugin boilerplate (for 1.8/9+)
+ * Author: @addyosmani
+ * Further changes: @peolanha
+ * Licensed under the MIT license
+ */
 
 
 ;(function ($, window, document, undefined) {
