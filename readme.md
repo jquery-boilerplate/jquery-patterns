@@ -15,7 +15,7 @@ This project won't seek to provide solutions to every possible pattern, but will
 <li>A lightweight start - jquery.basic.plugin-boilerplate.js</li>
 <li>Widget factory - jquery.widget-factory.plugin-boilerplate.js</li>
 <li>Namespaced - jquery.namespace.plugin-boilerplate.js</li>
-<li>Glocally/Per-call overridable options - jquery.best-options.plugin-boilerplate.js</li>
+<li>Globally/Per-call overridable options - jquery.best-options.plugin-boilerplate.js</li>
 <li>Custom events (Pseudo Pub/Sub) - jquery.customevents.plugin-boilerplate.js</li>
 <li>Extend - jquery.extend-skeleton.plugin-boilerplate.js</li>
 <li>Non Widget-factory widget - jquery.simplewidget.plugin-boilerplate.js</li>
