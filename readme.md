@@ -20,6 +20,7 @@ This project won't seek to provide solutions to every possible pattern, but will
 <li>Custom events (Pseudo Pub/Sub); for better application decoupling. Uses the Widget factory, but could be applied to the generic template - jquery.customevents.plugin-boilerplate.js</li>
 <li>Extend pattern - jquery.extend-skeleton.plugin-boilerplate.js</li>
 <li>Non Widget-factory widget; if you wish to stay away from the widget factory. Uses Ben Alman's simplewidget including coverage for creation, instantiation and other best practices that may be helpful  - jquery.simplewidget.plugin-boilerplate.js</li>
+<li>Prototypal inheritance pattern; use a bridge to generate a plugin from an object (literal). Useful for code organization, readability, functionality heavily based around DOM element selection - jquery.prototypal-inheritance.plugin-boilerplate.js</li>
 </ul>
 
 
