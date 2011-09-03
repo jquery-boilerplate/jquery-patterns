@@ -13,13 +13,13 @@ This project won't seek to provide solutions to every possible pattern, but will
 ###Patterns 
 
 <ul>
-<li>A lightweight start; perfect as a generic template for beginners and above - jquery.basic.plugin-boilerplate.js</li>
-<li>Widget factory; for building complex, stateful plugins - jquery.widget-factory.plugin-boilerplate.js</li>
-<li>Namespaced pattern; to avoid collisions and improve code organization - jquery.namespace.plugin-boilerplate.js</li>
-<li>Globally/Per-call overridable options; for more flexible 'options' - jquery.best-options.plugin-boilerplate.js</li>
-<li>Custom events (Pseudo Pub/Sub); for better application decoupling - jquery.customevents.plugin-boilerplate.js</li>
+<li>A lightweight start; perfect as a generic template for beginners and above, uses a basic defaults object, simple constructor for assigning the element to work with and extending options with defaults and a lightweight wrapper around the constructor to avoid issues with multiple instantiations - jquery.basic.plugin-boilerplate.js</li>
+<li>Widget factory; for building complex, stateful plugins based on object-oriented principles. The majority of jQueryUI heavily relies on the widget factory as a base for components and this template covers almost all supported default methods including triggering events - jquery.widget-factory.plugin-boilerplate.js</li>
+<li>Namespaced pattern; to avoid collisions and improve code organization when working with components under another namespace - jquery.namespace.plugin-boilerplate.js</li>
+<li>Better options; Globally/Per-call overridable options for greater option customization, based on Ben Almans pluginization talk - jquery.best-options.plugin-boilerplate.js</li>
+<li>Custom events (Pseudo Pub/Sub); for better application decoupling. Uses the Widget factory, but could be applied to the generic template - jquery.customevents.plugin-boilerplate.js</li>
 <li>Extend pattern - jquery.extend-skeleton.plugin-boilerplate.js</li>
-<li>Non Widget-factory widget; if you wish to stay away from the widget factory - jquery.simplewidget.plugin-boilerplate.js</li>
+<li>Non Widget-factory widget; if you wish to stay away from the widget factory. Uses Ben Alman's simplewidget including coverage for creation, instantiation and other best practices that may be helpful  - jquery.simplewidget.plugin-boilerplate.js</li>
 </ul>
 
 
