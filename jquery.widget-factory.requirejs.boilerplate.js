@@ -11,7 +11,7 @@ This assumes you are using the RequireJS+jQuery file, and that the following
 files are all in the same directory: 
 
 - require-jquery.js 
-- jquery-ao.custom.min.js (custom jQueryUI build with widget factory) 
+- jquery-ui.custom.min.js (custom jQueryUI build with widget factory) 
 - templates/ 
     - asset.html 
 - ao.myWidget.js 
