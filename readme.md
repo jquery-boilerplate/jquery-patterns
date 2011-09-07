@@ -15,6 +15,7 @@ This project won't seek to provide solutions to every possible pattern, but will
 <ul>
 <li><strong>A lightweight start</strong>: perfect as a generic template for beginners and above, uses a basic defaults object, simple constructor for assigning the element to work with and extending options with defaults and a lightweight wrapper around the constructor to avoid issues with multiple instantiations - jquery.basic.plugin-boilerplate.js</li>
 <li><strong>Widget factory</strong>: for building complex, stateful plugins based on object-oriented principles. The majority of jQueryUI heavily relies on the widget factory as a base for components and this template covers almost all supported default methods including triggering events - jquery.widget-factory.plugin-boilerplate.js</li>
+<li><strong>Widget factory + RequireJS</strong>: for wrapping jQueryUI widgets inside RequireJS compatible modules. Also demonstrates very basic widget templating - jquery.widget-factory.requirejs.boilerplate.js</li>
 <li><strong>Namespaced pattern</strong>: to avoid collisions and improve code organization when working with components under another namespace - jquery.namespace.plugin-boilerplate.js</li>
 <li><strong>Better options</strong>: globally/Per-call overridable options for greater option customization, based on Ben Almans pluginization talk - jquery.best-options.plugin-boilerplate.js</li>
 <li><strong>Custom events (Pseudo Pub/Sub)</strong>: for better application decoupling. Uses the Widget factory, but could be applied to the generic template - jquery.customevents.plugin-boilerplate.js</li>
@@ -28,9 +29,9 @@ This project won't seek to provide solutions to every possible pattern, but will
 
 If you have ideas for improvements that can be made to patterns currently in the repo, please feel free to create a new issue for discussion or send a pull request upstream. The same can be said about new patterns you wish to propose being added; for the sake of limiting confusion and complexity, I would ideally like to keep the number of overall patterns in the repo below 10 for now.
 
-###Coming soon
+###Coming soon - AMD/UMD-compatible plugin and widget boilerplates
 
-Whilst a number of patterns are well commented, I would like to improve comments on all of them to ease understanding and also include more inline examples of sample usage for beginners. 
+Whilst the current repo provides examples for patterns you can use to create jQuery plugins, this is really only the beginning. Thomas Davis, I and a few other developers are currently discussing ways that we can define AMD/UMD-compatible widget and plugin modules which would offer a cleaner way to easily extend plugins/widgets than what we have available right now. We want to define a boilerplate for solving this which works with AMD-compatible loaders such as RequireJS and retains the principles of modular development at heart. To follow the discussion or get involved, checkout https://github.com/addyosmani/jquery-plugin-patterns/issues/1.
 
 ###Credits
 Thanks to @peolanha, @ajpiano, @mathias, @cowboy, @dougneiner and others for their previous work (or tips) in this area. Some of this work is used as a basis for further improvements.
