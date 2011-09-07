@@ -42,7 +42,7 @@ We want to define a boilerplate for solving this which works with AMD-compatible
 ###Credits
 Thanks to @peolanha, @ajpiano, @mathias, @cowboy, @dougneiner and others for their previous work (or tips) in this area. Some of this work is used as a basis for further improvements.
 
-####Further reading
+###Further reading
 
 <ul>
 <li><a href="http://msdn.microsoft.com/en-us/scriptjunkie/ff696759">Style in jQuery plugins and why it matters</a></li>
