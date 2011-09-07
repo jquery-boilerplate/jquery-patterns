@@ -49,8 +49,9 @@ Thanks to @peolanha, @ajpiano, @mathias, @cowboy, @dougneiner and others for the
 <li><a href="http://alexsexton.com/?p=51">Using inheritance patterns to organize large jQuery applications</a></li>
 <li><a href="http://benalman.com/talks/jquery-pluginization.html">jQuery Pluginization by Ben Alman</a></li>
 <li><a href="http://fuelyourcoding.com/jquery-plugin-design-patterns-part-i/">jQuery Plugin design patterns</a></li>
+<li><a href="http://ajpiano.com/widgetfactory/#slide1">The jQuery UI Widet Factory - Wat? By Adam Sontag</a></li>
 <li><a href="http://docs.jquery.com/UI_Developer_Guide">jQuery UI developer's guide (incl. coverage of the widget factory)</a></li>
 <li><a href="http://www.learningjquery.com/2007/10/a-plugin-development-pattern">A Plugin development pattern</a></li>
-<li><a href="http://tagneto.blogspot.com/2011/01/jquery-ui-as-amd-modules-for-use-in.html">jQueryUI as AMD modules</a></li>
+<li><a href="http://tagneto.blogspot.com/2011/01/jquery-ui-as-amd-modules-for-use-in.html">jQuery UI as AMD modules</a></li>
 </ul>
 
