@@ -45,10 +45,12 @@ Thanks to @peolanha, @ajpiano, @mathias, @cowboy, @dougneiner and others for the
 ####Further reading
 
 <ul>
-<li>Style in jQuery plugins and why it matters http://msdn.microsoft.com/en-us/scriptjunkie/ff696759</li>
-<li>Using inheritance patterns to organize large jQuery applications http://alexsexton.com/?p=51</li>
-<li>jQuery Pluginization http://benalman.com/talks/jquery-pluginization.html</li>
-<li>jQuery Plugin design patterns http://fuelyourcoding.com/jquery-plugin-design-patterns-part-i/</li>
-<li>jQuery UI developer's guide (incl. coverage of the widget factory)  http://docs.jquery.com/UI_Developer_Guide</li>
-<li>jQueryUI as AMD modules http://tagneto.blogspot.com/2011/01/jquery-ui-as-amd-modules-for-use-in.html</li>
+<li>[Style in jQuery plugins and why it matters](http://msdn.microsoft.com/en-us/scriptjunkie/ff696759)</li>
+<li>[Using inheritance patterns to organize large jQuery applications](http://alexsexton.com/?p=51)</li>
+<li>[jQuery Pluginization by Ben Alman](http://benalman.com/talks/jquery-pluginization.html)</li>
+<li>[jQuery Plugin design patterns](http://fuelyourcoding.com/jquery-plugin-design-patterns-part-i/)</li>
+<li>[jQuery UI developer's guide (incl. coverage of the widget factory)](http://docs.jquery.com/UI_Developer_Guide)</li>
+<li>[A Plugin development pattern](http://www.learningjquery.com/2007/10/a-plugin-development-pattern)</li>
+<li>[jQueryUI as AMD modules](http://tagneto.blogspot.com/2011/01/jquery-ui-as-amd-modules-for-use-in.html)</li>
 </ul>
+
