@@ -37,7 +37,7 @@ Whilst the current repo provides examples for patterns you can use to create jQu
 
 We want to define a boilerplate for solving this which works with AMD-compatible loaders such as RequireJS and retains the principles of modular development at heart. To follow the discussion or get involved, checkout https://github.com/addyosmani/jquery-plugin-patterns/issues/1.
 
-####Improved examples demonstrating usage of including boilerplates
+####Improved examples demonstrating usage of patterns. Further documentation on why particular patterns should be used.
 
 ###Credits
 Thanks to @peolanha, @ajpiano, @mathias, @cowboy, @dougneiner and others for their previous work (or tips) in this area. Some of this work is used as a basis for further improvements.
@@ -45,12 +45,12 @@ Thanks to @peolanha, @ajpiano, @mathias, @cowboy, @dougneiner and others for the
 ####Further reading
 
 <ul>
-<li>[Style in jQuery plugins and why it matters](http://msdn.microsoft.com/en-us/scriptjunkie/ff696759)</li>
-<li>[Using inheritance patterns to organize large jQuery applications](http://alexsexton.com/?p=51)</li>
-<li>[jQuery Pluginization by Ben Alman](http://benalman.com/talks/jquery-pluginization.html)</li>
-<li>[jQuery Plugin design patterns](http://fuelyourcoding.com/jquery-plugin-design-patterns-part-i/)</li>
-<li>[jQuery UI developer's guide (incl. coverage of the widget factory)](http://docs.jquery.com/UI_Developer_Guide)</li>
-<li>[A Plugin development pattern](http://www.learningjquery.com/2007/10/a-plugin-development-pattern)</li>
-<li>[jQueryUI as AMD modules](http://tagneto.blogspot.com/2011/01/jquery-ui-as-amd-modules-for-use-in.html)</li>
+<li><a href="http://msdn.microsoft.com/en-us/scriptjunkie/ff696759">Style in jQuery plugins and why it matters</a></li>
+<li><a href="http://alexsexton.com/?p=51">Using inheritance patterns to organize large jQuery applications</a></li>
+<li><a href="http://benalman.com/talks/jquery-pluginization.html">jQuery Pluginization by Ben Alman</a></li>
+<li><a href="http://fuelyourcoding.com/jquery-plugin-design-patterns-part-i/">jQuery Plugin design patterns</a></li>
+<li><a href="http://docs.jquery.com/UI_Developer_Guide">jQuery UI developer's guide (incl. coverage of the widget factory)</a></li>
+<li><a href="http://www.learningjquery.com/2007/10/a-plugin-development-pattern">A Plugin development pattern</a></li>
+<li><a href="http://tagneto.blogspot.com/2011/01/jquery-ui-as-amd-modules-for-use-in.html">jQueryUI as AMD modules</a></li>
 </ul>
 
