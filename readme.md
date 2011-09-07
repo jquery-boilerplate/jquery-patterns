@@ -31,11 +31,11 @@ If you have ideas for improvements that can be made to patterns currently in the
 
 ###Coming soon
 
-##AMD/UMD-compatible plugin and widget boilerplates
+####AMD/UMD-compatible plugin and widget boilerplates
 
 Whilst the current repo provides examples for patterns you can use to create jQuery plugins, this is really only the beginning. Thomas Davis, I and a few other developers are currently discussing ways that we can define AMD/UMD-compatible widget and plugin modules which would offer a cleaner way to easily extend plugins/widgets than what we have available right now. We want to define a boilerplate for solving this which works with AMD-compatible loaders such as RequireJS and retains the principles of modular development at heart. To follow the discussion or get involved, checkout https://github.com/addyosmani/jquery-plugin-patterns/issues/1.
 
-##Improved examples demonstrating usage of including boilerplates
+####Improved examples demonstrating usage of including boilerplates
 
 ###Credits
 Thanks to @peolanha, @ajpiano, @mathias, @cowboy, @dougneiner and others for their previous work (or tips) in this area. Some of this work is used as a basis for further improvements.
