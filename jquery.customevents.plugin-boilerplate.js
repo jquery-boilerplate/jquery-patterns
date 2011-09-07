@@ -14,7 +14,7 @@ and allows them to function independently.
 */
 
 (function(){
-    $.widget("ui.eventStatus", {
+    $.widget("ao.eventStatus", {
         options: {
 
         },
