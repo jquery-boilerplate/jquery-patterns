@@ -11,18 +11,18 @@ This assumes you are using the RequireJS+jQuery file, and that the following
 files are all in the same directory: 
 
 - require-jquery.js 
-- jquery-ui.custom.min.js (custom jQueryUI build with widget factory) 
+- jquery-ao.custom.min.js (custom jQueryUI build with widget factory) 
 - templates/ 
     - asset.html 
-- ui.myWidget.js 
+- ao.myWidget.js 
 
 Then you can construct the widget like so: 
 */
 
 
-//ui.myWidget.js file: 
-define("ui.myWidget", ["jquery", "text!templates/asset.html", "jquery-ui.custom.min"], function ($, assetHtml) { 
-    $.widget("ui.myWidget", { 
+//ao.myWidget.js file: 
+define("ao.myWidget", ["jquery", "text!templates/asset.html", "jquery-ao.custom.min"], function ($, assetHtml) { 
+    $.widget("ao.myWidget", { 
         options: {}, 
         //Setup widget (eg. element creation, apply theming, bind events etc.)
         _create: function () {
@@ -75,8 +75,8 @@ define("ui.myWidget", ["jquery", "text!templates/asset.html", "jquery-ui.custom.
 
 /*
 If you are going to use the RequireJS optimizer to combine files  together, you can 
-leave off the "ui.myWidget" argument to define: 
-define(["jquery", "text!templates/asset.html", "jquery-ui.custom.min"], ..... 
+leave off the "ao.myWidget" argument to define: 
+define(["jquery", "text!templates/asset.html", "jquery-ao.custom.min"], ..... 
 */
 
 
