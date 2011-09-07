@@ -27,15 +27,28 @@ This project won't seek to provide solutions to every possible pattern, but will
 
 ###Contributing
 
-If you have ideas for improvements that can be made to patterns currently in the repo, please feel free to create a new issue for discussion or send a pull request upstream. The same can be said about new patterns you wish to propose being added; for the sake of limiting confusion and complexity, I would ideally like to keep the number of overall patterns in the repo below 10 for now.
+If you have ideas for improvements that can be made to patterns currently in the repo, please feel free to create a new issue for discussion or send a pull request upstream. The same can be said about new patterns you wish to propose being added; for the sake of limiting confusion and complexity, I would ideally like to keep the number of overall patterns in the repo, but there are plans to separate these out into folders based on concerns. 
 
 ###Coming soon
 
 ####AMD/UMD-compatible plugin and widget boilerplates
 
-Whilst the current repo provides examples for patterns you can use to create jQuery plugins, this is really only the beginning. Thomas Davis, I and a few other developers are currently discussing ways that we can define AMD/UMD-compatible widget and plugin modules which would offer a cleaner way to easily extend plugins/widgets than what we have available right now. We want to define a boilerplate for solving this which works with AMD-compatible loaders such as RequireJS and retains the principles of modular development at heart. To follow the discussion or get involved, checkout https://github.com/addyosmani/jquery-plugin-patterns/issues/1.
+Whilst the current repo provides examples for patterns you can use to create jQuery plugins, this is really only the beginning. @thomasdavis, I and a few other developers are currently discussing ways that we can define AMD/UMD-compatible widget and plugin modules which would offer a cleaner way to easily extend plugins/widgets than what we have available right now. 
+
+We want to define a boilerplate for solving this which works with AMD-compatible loaders such as RequireJS and retains the principles of modular development at heart. To follow the discussion or get involved, checkout https://github.com/addyosmani/jquery-plugin-patterns/issues/1.
 
 ####Improved examples demonstrating usage of including boilerplates
 
 ###Credits
 Thanks to @peolanha, @ajpiano, @mathias, @cowboy, @dougneiner and others for their previous work (or tips) in this area. Some of this work is used as a basis for further improvements.
+
+####Further reading
+
+<ul>
+<li>Style in jQuery plugins and why it matters http://msdn.microsoft.com/en-us/scriptjunkie/ff696759</li>
+<li>Using inheritance patterns to organize large jQuery applications http://alexsexton.com/?p=51</li>
+<li>jQuery Pluginization http://benalman.com/talks/jquery-pluginization.html</li>
+<li>jQuery Plugin design patterns http://fuelyourcoding.com/jquery-plugin-design-patterns-part-i/</li>
+<li>jQuery UI developer's guide (incl. coverage of the widget factory)  http://docs.jquery.com/UI_Developer_Guide</li>
+<li>jQueryUI as AMD modules http://tagneto.blogspot.com/2011/01/jquery-ui-as-amd-modules-for-use-in.html</li>
+</ul>
