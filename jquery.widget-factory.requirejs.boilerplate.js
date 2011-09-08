@@ -21,11 +21,24 @@ Then you can construct the widget like so:
 
 
 //ao.myWidget.js file: 
-define("ao.myWidget", ["jquery", "text!templates/asset.html", "jquery-ui.custom.min"], function ($, assetHtml) { 
+define("ao.myWidget", ["jquery", "text!templates/asset.html", "jquery-ui.custom.min"], function ($, assetHtml) {
+
+    //define your widget under a namespace of your choice
+    //'ao' is used here as a demonstration 
     $.widget("ao.myWidget", { 
+
+        //Options to be used as defaults
         options: {}, 
+
         //Setup widget (eg. element creation, apply theming, bind events etc.)
         _create: function () {
+
+            // _create will automatically run the first time this widget is called
+            // Put the initial widget setup code here, then you can access the element 
+            // on which the widget was called via this.element
+            // The options defined above can be accessed via this.options
+
+            //this.element.addStuff();
             //this.element.addStuff();
             //this.element.tmpl(assetHtml).appendTo(this.content); 
         },

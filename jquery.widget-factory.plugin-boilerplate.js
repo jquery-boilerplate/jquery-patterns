@@ -8,6 +8,8 @@
 
 ;(function ($, window, document, undefined) {
 
+    //define your widget under a namespace of your choice
+    //here 'demo' has been used as an example
     $.widget("demo.myComponent", {
 
         //Options to be used as defaults
@@ -17,11 +19,18 @@
 
         //Setup widget (eg. element creation, apply theming, bind events etc.)
         _create: function () {
+
+            // _create will automatically run the first time this widget is called
+            // Put the initial widget setup code here, then you can access the element 
+            // on which the widget was called via this.element
+            // The options defined above can be accessed via this.options
+
             //this.element.addStuff();
         },
 
         //Destroy an instantiated plugin and clean-up modifications the widget has made to the DOM
         destroy: function () {
+
             //this.element.removeStuff();
             // For UI 1.8, destroy must be invoked from the base widget
             $.Widget.prototype.destroy.call(this);
@@ -29,6 +38,7 @@
         },
 
         methodB: function (event) {
+            
             //_trigger dispatches callbacks the plugin user can subscribe to
             //signature: _trigger(type, event, objectOfKeyValuePairsToPassToCallback)
             this._trigger('methodA', event, {
