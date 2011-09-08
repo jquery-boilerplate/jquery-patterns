@@ -23,6 +23,10 @@
 			// Put the initial widget setup code here, then you can access the element 
 			// on which the widget was called via this.element
 			// The options defined above can be accessed via this.options
+
+			//var m = this.element,
+	  		//p = m.parents(":jqmData(role='page')"),
+	  		//c = p.find(":jqmData(role='content')")
 		},
 
 		// Private methods/props start with underscores
