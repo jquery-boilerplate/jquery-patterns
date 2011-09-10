@@ -13,7 +13,7 @@ subscribe to others. This approach effectively decouples the widgets
 and allows them to function independently.
 */
 
-(function(){
+;(function ($, window, document, undefined) {
     $.widget("ao.eventStatus", {
         options: {
 
@@ -34,6 +34,6 @@ and allows them to function independently.
             $.Widget.prototype.destroy.apply(this, arguments);
         },
     });
-});
+})(jQuery, window, document);
 
 //usage: $(".my-widget").trigger("myEventStart");
