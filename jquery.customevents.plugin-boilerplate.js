@@ -32,6 +32,11 @@ and allows them to function independently.
             self.element.bind("myEventEnd", function(e) {
                 console.log("event end");
             });
+
+            //unsubscrube to 'myEventStart'
+            //self.element.unbind("myEventStart", function(e){
+                ///console.log("unsubscribed to this event"); 
+            //});
         },
         destroy: function(){
             $.Widget.prototype.destroy.apply(this, arguments);
