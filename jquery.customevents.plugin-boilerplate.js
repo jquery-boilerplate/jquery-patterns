@@ -21,11 +21,14 @@ and allows them to function independently.
         _create : function() {
             var self = this;
 
-            self.element.addClass("my-widget")
+            //self.element.addClass("my-widget");
+
+            //subscribe to 'myEventStart'
             self.element.bind("myEventStart", function(e) {
                 console.log("event start");
             });
 
+            //subscribe to 'myEventEnd'
             self.element.bind("myEventEnd", function(e) {
                 console.log("event end");
             });
@@ -34,6 +37,9 @@ and allows them to function independently.
             $.Widget.prototype.destroy.apply(this, arguments);
         },
     });
-})(jQuery, window, document);
+})(jQuery, window);
 
-//usage: $(".my-widget").trigger("myEventStart");
+//Publishing event notifications
+//usage: 
+// $(".my-widget").trigger("myEventStart");
+// $(".my-widget").trigger("myEventEnd");
