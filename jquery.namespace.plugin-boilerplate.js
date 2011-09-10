@@ -6,7 +6,7 @@
 
 (function ($) {
     if (!$.myNamespace) {
-        $.myNamespace = new Object();
+        $.myNamespace = {};
     };
 
     $.myNamespace.myPluginName = function (el, myFunctionParam, options) {
