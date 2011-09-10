@@ -18,6 +18,7 @@ and allows them to function independently.
         options: {
 
         },
+        
         _create : function() {
             var self = this;
 
@@ -33,11 +34,12 @@ and allows them to function independently.
                 console.log("event end");
             });
 
-            //unsubscrube to 'myEventStart'
+            //unsubscribe to 'myEventStart'
             //self.element.unbind("myEventStart", function(e){
                 ///console.log("unsubscribed to this event"); 
             //});
         },
+
         destroy: function(){
             $.Widget.prototype.destroy.apply(this, arguments);
         },
