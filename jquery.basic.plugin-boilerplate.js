@@ -1,13 +1,16 @@
 /*!
  * jQuery lightweight plugin boilerplate
- * Author: @ajpiano
+ * Authors: @ajpiano
  * Further changes: @addyosmani
  * Licensed under the MIT license
  */
 
-;(function ($, undefined) {
 
-    // Create the defaults, only once!
+// the semi-colon before function invocation is a safety net against concatenated 
+// scripts and/or other plugins which may not be closed properly.
+;(function ($, window, document, undefined) {
+
+    // Create the defaults once
     var pluginName = 'defaultPluginName',
         defaults = {
             propertyName: "value"
