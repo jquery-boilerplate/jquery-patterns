@@ -8,9 +8,12 @@
 
 ;(function ($, window, document, undefined) {
 
-    //define your widget under a namespace of your choice
-    //here 'demo' has been used as an example
-    $.widget("demo.myComponent", {
+    // define your widget under a namespace of your choice with additional parameters
+    // eg. $.widget( "namespace.widgetname", 
+    // optional - an existing widget prototype to inherit from, 
+    // An object literal to become the widget's prototype ); 
+
+    $.widget("namespace.widgetname", {
 
         //Options to be used as defaults
         options: {
@@ -38,7 +41,7 @@
         },
 
         methodB: function (event) {
-            
+
             //_trigger dispatches callbacks the plugin user can subscribe to
             //signature: _trigger(type, event, objectOfKeyValuePairsToPassToCallback)
             this._trigger('methodA', event, {
