@@ -42,11 +42,11 @@ var myObject = {
     name: "No name"
   },
   _build: function(){
-    this.$elem.html('<h1>'+this.options.name+'</h1>');
+    //this.$elem.html('<h1>'+this.options.name+'</h1>');
   },
   myMethod: function(msg){
     // You have direct access to the associated and cached jQuery element
-    this.$elem.append('<p>'+msg+'</p>');
+    //this.$elem.append('<p>'+msg+'</p>');
   }
 };
 
@@ -66,10 +66,11 @@ $.plugin = function(name, object) {
   };
 };
 
+//Usage:
 // With myObject, we could now essentially do this:
-$.plugin('myobj', myObject);
+//$.plugin('myobj', myObject);
 
 // and at this point we could do the following
-$('#elem').myobj({name: "John"});
-var inst = $('#elem').data('myobj');
-inst.myMethod('I am a method');
+//$('#elem').myobj({name: "John"});
+//var inst = $('#elem').data('myobj');
+//inst.myMethod('I am a method');
