@@ -6,18 +6,16 @@
  */
 
 
-/*
-A distilled template based on @cowboys jQuery pluginization
-'best options' tip where options can be overridden both globally 
-and per-call. Thanks to @mathias for reminding me about the 
-pattern.
-*/
-
-(function ($, undefined) {
+;(function ($, window, document, undefined) {
 
     $.fn.pluginName = function (options) {
 
-        // Override defaults with specified options.
+        // Best approach for overriding 'defaults' with specified options. 
+        // Note how rather than a regular defaults object being passed as the second
+        // parameter, we instead refer to $.fn.pluginName.options explicitly, merging it
+        // with the options passed directly to the plugin. This allows us to override
+        // options both globally and on a per-call level. 
+
         options = $.extend({}, $.fn.pluginName.options, options);
 
         return this.each(function () {
@@ -31,8 +29,9 @@ pattern.
     $.fn.pluginName.options = {
 
         key: "value",
-        myMethod: function (elem, param) {}
-
+        myMethod: function (elem, param) {
+            
+        }
     };
     
-})(jQuery);
+})(jQuery, window);
