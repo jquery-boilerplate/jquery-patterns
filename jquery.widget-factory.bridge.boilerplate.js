@@ -1,12 +1,16 @@
 /*!
  * jQuery UI Widget factory "bridge" plugin boilerplate
  * Author: @erichynds
- * Further changes: @addyosmani
+ * Further changes, additional comments: @addyosmani
  * Licensed under the MIT license
  */
 
 
+
 // a "widgetName" object constructor
+// required: this must accept two arguments,
+// options: an object of configuration options
+// element: the DOM element the instance was created on
 var widgetName = function( options, element ){
   this.name = "myWidgetName";
   this.options = options;
@@ -15,7 +19,7 @@ var widgetName = function( options, element ){
 }
 
 
-// the "widget" prototype
+// the "widgetName" prototype
 widgetName.prototype = {
     
     // _create will automatically run the first time this widget is called
@@ -23,16 +27,21 @@ widgetName.prototype = {
         // creation code
     },
 
-    // _init fires when your instance is first created and when 
+    // required: initialization logic for the plugin goes into _init
+    // This fires when your instance is first created and when 
     // attempting to initialize the widget again (by the bridge)
     // after it has already been initialized.
     _init: function(){
         // init code
     },
 
+    // required: objects to be used with the bridge must contain an 
+    // 'option'. Post-initialization, logic for changing options go
+    // here. 
     option: function( key, value ){
         
         // optional: get/change options post initialization
+        // ignore if you don't require them.
         
         // signature: $('#foo').bar({ cool:false });
         if( $.isPlainObject( key ) ){
@@ -47,7 +56,10 @@ widgetName.prototype = {
             this.options[ key ] = value;
         }
         
-        return this; //return the instance
+        // required: option must return the current instance. When re-
+        // initializing an instance on elements, option is called first
+        // and is then chained to the _init method.
+        return this;  
     },
 
     // notice no underscore is used for public methods
@@ -63,6 +75,7 @@ widgetName.prototype = {
 
 /*
 usage:
+
 // connect the widget obj to jQuery's API under the "foo" namespace
 $.widget.bridge("foo", widgetName);
 
