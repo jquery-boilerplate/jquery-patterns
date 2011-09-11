@@ -21,7 +21,7 @@ Then you can construct the widget like so:
 
 
 //ao.myWidget.js file: 
-define("ao.myWidget", ["jquery", "text!templates/asset.html", "jquery-ui.custom.min"], function ($, assetHtml) {
+define("ao.myWidget", ["jquery", "text!templates/asset.html", "jquery-ui.custom.min","jquery.tmpl"], function ($, assetHtml) {
 
     //define your widget under a namespace of your choice
     //'ao' is used here as a demonstration 
