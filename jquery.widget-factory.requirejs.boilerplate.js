@@ -25,7 +25,7 @@ define("ao.myWidget", ["jquery", "text!templates/asset.html", "jquery-ui.custom.
 
     //define your widget under a namespace of your choice
     //'ao' is used here as a demonstration 
-    $.widget("ao.myWidget", { 
+    $.widget( "ao.myWidget", { 
 
         //Options to be used as defaults
         options: {}, 

@@ -77,7 +77,7 @@
 	    }
 	});
 
-})(jQuery, window, document);
+})( jQuery, window, document );
 
 //usage: $("#myelem").foo( options );
 

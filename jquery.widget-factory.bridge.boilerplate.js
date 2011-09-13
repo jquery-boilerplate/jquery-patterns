@@ -45,7 +45,7 @@ widgetName.prototype = {
         
         // signature: $('#foo').bar({ cool:false });
         if( $.isPlainObject( key ) ){
-            this.options = $.extend(true, this.options, key);
+            this.options = $.extend( true, this.options, key );
         
         // signature: $('#foo').option('cool'); - getter
         } else if ( key && typeof value === "undefined" ){

@@ -44,7 +44,7 @@ and allows them to function independently.
             $.Widget.prototype.destroy.apply( this, arguments );
         },
     });
-})(jQuery, window);
+})( jQuery, window );
 
 //Publishing event notifications
 //usage: 

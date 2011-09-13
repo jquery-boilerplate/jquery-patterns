@@ -13,7 +13,7 @@
     // optional - an existing widget prototype to inherit from, 
     // An object literal to become the widget's prototype ); 
 
-    $.widget("namespace.widgetname", {
+    $.widget( "namespace.widgetname", {
 
         //Options to be used as defaults
         options: {
@@ -73,4 +73,4 @@
         }
     });
 
-})(jQuery, window, document);
+})( jQuery, window, document );

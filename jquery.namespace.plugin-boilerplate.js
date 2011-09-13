@@ -5,7 +5,7 @@
  * Licensed under the MIT license
  */
 
-;(function ($) {
+;(function ( $ ) {
     if (!$.myNamespace) {
         $.myNamespace = {};
     };
@@ -48,4 +48,4 @@
         });
     };
 
-})(jQuery);
+})( jQuery );
