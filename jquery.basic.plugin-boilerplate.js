@@ -33,7 +33,7 @@
         // more objects, storing the result in the first object. The first object
         // is generally empty as we don't want to alter the default options for
         // future instances of the plugin
-        this.options = $.extend({}, defaults, this.options);
+        this.options = $.extend({}, defaults, options);
         
         this._defaults = defaults;
         this._name = pluginName;
