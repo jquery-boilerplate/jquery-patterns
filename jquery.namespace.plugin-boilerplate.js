@@ -1,12 +1,13 @@
 /*!
  * jQuery namespaced 'Starter' plugin boilerplate
  * Author: @dougneiner
+ * Further changes: @addyosmani
  * Licensed under the MIT license
  */
 
-(function ($) {
+;(function ($) {
     if (!$.myNamespace) {
-        $.myNamespace = new Object();
+        $.myNamespace = {};
     };
 
     $.myNamespace.myPluginName = function (el, myFunctionParam, options) {

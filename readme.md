@@ -16,6 +16,7 @@ This project won't seek to provide solutions to every possible pattern, but will
 <li><strong>A lightweight start</strong>: perfect as a generic template for beginners and above, uses a basic defaults object, simple constructor for assigning the element to work with and extending options with defaults and a lightweight wrapper around the constructor to avoid issues with multiple instantiations - jquery.basic.plugin-boilerplate.js</li>
 <li><strong>Widget factory</strong>: for building complex, stateful plugins based on object-oriented principles. The majority of jQueryUI heavily relies on the widget factory as a base for components and this template covers almost all supported default methods including triggering events - jquery.widget-factory.plugin-boilerplate.js</li>
 <li><strong>Widget factory + RequireJS</strong>: for wrapping jQueryUI widgets inside RequireJS compatible modules. Also demonstrates very basic widget templating - jquery.widget-factory.requirejs.boilerplate.js</li>
+<li><strong>Widget factory for jQuery mobile</strong> - demonstrating best practices for building mobile widgets, includes many of the same concepts as the widget factory boilerplate, but also JQM specific usage advice/tips in the comments - jquery.widget-factory.mobile-plugin.boilerplate.js </li>
 <li><strong>Namespaced pattern</strong>: to avoid collisions and improve code organization when working with components under another namespace - jquery.namespace.plugin-boilerplate.js</li>
 <li><strong>Better options</strong>: globally/Per-call overridable options for greater option customization, based on Ben Almans pluginization talk - jquery.best-options.plugin-boilerplate.js</li>
 <li><strong>Custom events (Pseudo Pub/Sub)</strong>: for better application decoupling. Uses the Widget factory, but could be applied to the generic template - jquery.customevents.plugin-boilerplate.js</li>
@@ -42,15 +43,16 @@ We want to define a boilerplate for solving this which works with AMD-compatible
 ###Credits
 Thanks to @peolanha, @ajpiano, @mathias, @cowboy, @dougneiner and others for their previous work (or tips) in this area. Some of this work is used as a basis for further improvements.
 
-####Further reading
+###Further reading
 
 <ul>
 <li><a href="http://msdn.microsoft.com/en-us/scriptjunkie/ff696759">Style in jQuery plugins and why it matters</a></li>
 <li><a href="http://alexsexton.com/?p=51">Using inheritance patterns to organize large jQuery applications</a></li>
 <li><a href="http://benalman.com/talks/jquery-pluginization.html">jQuery Pluginization by Ben Alman</a></li>
 <li><a href="http://fuelyourcoding.com/jquery-plugin-design-patterns-part-i/">jQuery Plugin design patterns</a></li>
+<li><a href="http://ajpiano.com/widgetfactory/#slide1">The jQuery UI Widet Factory - Wat? By Adam Sontag</a></li>
 <li><a href="http://docs.jquery.com/UI_Developer_Guide">jQuery UI developer's guide (incl. coverage of the widget factory)</a></li>
 <li><a href="http://www.learningjquery.com/2007/10/a-plugin-development-pattern">A Plugin development pattern</a></li>
-<li><a href="http://tagneto.blogspot.com/2011/01/jquery-ui-as-amd-modules-for-use-in.html">jQueryUI as AMD modules</a></li>
+<li><a href="http://tagneto.blogspot.com/2011/01/jquery-ui-as-amd-modules-for-use-in.html">jQuery UI as AMD modules</a></li>
 </ul>
 

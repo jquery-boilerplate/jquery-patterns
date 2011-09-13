@@ -14,18 +14,31 @@ files are all in the same directory:
 - jquery-ui.custom.min.js (custom jQueryUI build with widget factory) 
 - templates/ 
     - asset.html 
-- ui.myWidget.js 
+- ao.myWidget.js 
 
 Then you can construct the widget like so: 
 */
 
 
-//ui.myWidget.js file: 
-define("ui.myWidget", ["jquery", "text!templates/asset.html", "jquery-ui.custom.min"], function ($, assetHtml) { 
-    $.widget("ui.myWidget", { 
+//ao.myWidget.js file: 
+define("ao.myWidget", ["jquery", "text!templates/asset.html", "jquery-ui.custom.min","jquery.tmpl"], function ($, assetHtml) {
+
+    //define your widget under a namespace of your choice
+    //'ao' is used here as a demonstration 
+    $.widget("ao.myWidget", { 
+
+        //Options to be used as defaults
         options: {}, 
+
         //Setup widget (eg. element creation, apply theming, bind events etc.)
         _create: function () {
+
+            // _create will automatically run the first time this widget is called
+            // Put the initial widget setup code here, then you can access the element 
+            // on which the widget was called via this.element
+            // The options defined above can be accessed via this.options
+
+            //this.element.addStuff();
             //this.element.addStuff();
             //this.element.tmpl(assetHtml).appendTo(this.content); 
         },
@@ -75,7 +88,7 @@ define("ui.myWidget", ["jquery", "text!templates/asset.html", "jquery-ui.custom.
 
 /*
 If you are going to use the RequireJS optimizer to combine files  together, you can 
-leave off the "ui.myWidget" argument to define: 
+leave off the "ao.myWidget" argument to define: 
 define(["jquery", "text!templates/asset.html", "jquery-ui.custom.min"], ..... 
 */
 
