@@ -6,9 +6,9 @@
  */
 
 
-;(function ($, window, document, undefined) {
+;(function ( $, window, document, undefined ) {
 
-    $.fn.pluginName = function (options) {
+    $.fn.pluginName = function ( options ) {
 
         // Here's a 'best' approach for overriding 'defaults' with specified options. 
         // Note how rather than a regular defaults object being passed as the second
@@ -16,7 +16,7 @@
         // with the options passed directly to the plugin. This allows us to override
         // options both globally and on a per-call level. 
 
-        options = $.extend({}, $.fn.pluginName.options, options);
+        options = $.extend( {}, $.fn.pluginName.options, options );
 
         return this.each(function () {
 
@@ -34,9 +34,9 @@
     $.fn.pluginName.options = {
 
         key: "value",
-        myMethod: function (elem, param) {
+        myMethod: function ( elem, param ) {
             
         }
     };
     
-})(jQuery, window);
+})( jQuery, window );
