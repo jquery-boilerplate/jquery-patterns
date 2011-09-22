@@ -64,4 +64,4 @@
 
   //optional: window.Plugin = Plugin;
 
-})( jQuery, window );
+})( jQuery, window, document );
