@@ -5,12 +5,12 @@
  * Licensed under the MIT license
  */
 
-;(function ($) {
+;(function ( $ ) {
     if (!$.myNamespace) {
         $.myNamespace = {};
     };
 
-    $.myNamespace.myPluginName = function (el, myFunctionParam, options) {
+    $.myNamespace.myPluginName = function ( el, myFunctionParam, options ) {
         // To avoid scope issues, use 'base' instead of 'this'
         // to reference this class from internal events and functions.
         var base = this;
@@ -42,10 +42,10 @@
         myDefaultValue: ""
     };
 
-    $.fn.mynamespace_myPluginName = function (myFunctionParam, options) {
+    $.fn.mynamespace_myPluginName = function ( myFunctionParam, options ) {
         return this.each(function () {
             (new $.myNamespace.myPluginName(this, myFunctionParam, options));
         });
     };
 
-})(jQuery);
+})( jQuery );

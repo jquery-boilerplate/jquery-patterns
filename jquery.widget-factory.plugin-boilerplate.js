@@ -6,14 +6,14 @@
  */
 
 
-;(function ($, window, document, undefined) {
+;(function ( $, window, document, undefined ) {
 
     // define your widget under a namespace of your choice with additional parameters
     // eg. $.widget( "namespace.widgetname", 
     // optional - an existing widget prototype to inherit from, 
     // An object literal to become the widget's prototype ); 
 
-    $.widget("namespace.widgetname", {
+    $.widget( "namespace.widgetname", {
 
         //Options to be used as defaults
         options: {
@@ -40,7 +40,7 @@
             // For UI 1.9, define _destroy instead and don't worry about calling the base widget
         },
 
-        methodB: function (event) {
+        methodB: function ( event ) {
 
             //_trigger dispatches callbacks the plugin user can subscribe to
             //signature: _trigger(type, event, objectOfKeyValuePairsToPassToCallback)
@@ -49,14 +49,14 @@
             });
         },
 
-        methodA: function (event) {
+        methodA: function ( event ) {
             this._trigger('dataChanged', event, {
                 key: value
             });
         },
 
         //Respond to any changes the user makes to the option method
-        _setOption: function (key, value) {
+        _setOption: function ( key, value ) {
             switch (key) {
             case "someValue":
                 //this.options.someValue = doSomethingWith( value );
@@ -67,10 +67,10 @@
             }
 
             // For UI 1.8, _setOption must be manually invoked from the base widget
-            $.Widget.prototype._setOption.apply(this, arguments);
+            $.Widget.prototype._setOption.apply( this, arguments );
             // For UI 1.9 the _super method can be used instead
             //this._super( "_setOption", key, value );
         }
     });
 
-})(jQuery, window, document);
+})( jQuery, window, document );

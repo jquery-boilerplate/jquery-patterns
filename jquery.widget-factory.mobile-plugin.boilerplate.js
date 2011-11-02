@@ -5,7 +5,7 @@
  * Licensed under the MIT license
  */
 
-;(function ($, window, document, undefined) {
+;(function ( $, window, document, undefined ) {
 
 	//define a widget under a namespace of your choice
 	//here 'mobile' has been used in the first parameter
@@ -45,7 +45,7 @@
 	        // For UI 1.9, define _destroy instead and don't worry about calling the base widget
 	    },
 
-	    methodB: function (event) {
+	    methodB: function ( event ) {
 	        //_trigger dispatches callbacks the plugin user can subscribe to
 	        //signature: _trigger(type, event, objectOfKeyValuePairsToPassToCallback)
 	        this._trigger('methodA', event, {
@@ -53,14 +53,14 @@
 	        });
 	    },
 
-	    methodA: function (event) {
+	    methodA: function ( event ) {
 	        this._trigger('dataChanged', event, {
 	            key: value
 	        });
 	    },
 
 	    //Respond to any changes the user makes to the option method
-	    _setOption: function (key, value) {
+	    _setOption: function ( key, value ) {
 	        switch (key) {
 	        case "someValue":
 	            //this.options.someValue = doSomethingWith( value );
@@ -77,7 +77,7 @@
 	    }
 	});
 
-})(jQuery, window, document);
+})( jQuery, window, document );
 
 //usage: $("#myelem").foo( options );
 

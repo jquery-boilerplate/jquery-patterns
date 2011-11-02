@@ -18,7 +18,7 @@ which is also included in this repo.
 //scripts and/or other plugins which may not be closed properly.
 ;(function($){
     $.fn.extend({
-        pluginname: function(options) {
+        pluginname: function( options ) {
 
             this.defaultOptions = {};
 
