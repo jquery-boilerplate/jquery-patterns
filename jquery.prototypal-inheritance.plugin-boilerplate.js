@@ -5,11 +5,11 @@
  * Licensed under the MIT license
  */
 
-
-// myObject - an object representing a concept you wish to model (eg. a car)
+// myObject - an object representing a concept that you want
+// to model (e.g. a car)
 var myObject = {
   init: function( options, elem ) {
-    // Mix in the passed in options with the default options
+    // Mix in the passed-in options with the default options
     this.options = $.extend( {}, this.options, options );
 
     // Save the element reference, both as a jQuery
@@ -17,10 +17,10 @@ var myObject = {
     this.elem  = elem;
     this.$elem = $(elem);
 
-    // Build the dom initial structure
+    // Build the DOM's initial structure
     this._build();
 
-    // return this so we can chain/use the bridge with less code.
+    // return this so that we can chain and use the bridge with less code.
     return this;
   },
   options: {
@@ -30,13 +30,13 @@ var myObject = {
     //this.$elem.html('<h1>'+this.options.name+'</h1>');
   },
   myMethod: function( msg ){
-    // You have direct access to the associated and cached jQuery element
+    // You have direct access to the associated and cached
+    // jQuery element
     // this.$elem.append('<p>'+msg+'</p>');
   }
 };
 
-
-// Object.create support test and fallback for browsers without it
+// Object.create support test, and fallback for browsers without it
 if ( typeof Object.create !== 'function' ) {
     Object.create = function (o) {
         function F() {}
@@ -45,13 +45,13 @@ if ( typeof Object.create !== 'function' ) {
     };
 }
 
-
 // Create a plugin based on a defined object
 $.plugin = function( name, object ) {
   $.fn[name] = function( options ) {
     return this.each(function() {
       if ( ! $.data( this, name ) ) {
-        $.data( this, name, Object.create(object).init( options, this ) );
+        $.data( this, name, Object.create(object).init(
+        options, this ) );
       }
     });
   };

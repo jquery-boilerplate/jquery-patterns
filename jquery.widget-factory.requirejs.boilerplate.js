@@ -4,56 +4,61 @@
  * Licensed under the MIT license
  */
 
- /*
-Note from James:
+// Note from James:
+//
+// This assumes you are using the RequireJS+jQuery file, and
+// that the following files are all in the same directory:
+//
+// - require-jquery.js
+// - jquery-ui.custom.min.js (custom jQuery UI build with widget factory)
+// - templates/
+//    - asset.html
+// - ao.myWidget.js 
 
-This assumes you are using the RequireJS+jQuery file, and that the following 
-files are all in the same directory: 
+// Then you can construct the widget like so: 
 
-- require-jquery.js 
-- jquery-ui.custom.min.js (custom jQueryUI build with widget factory) 
-- templates/ 
-    - asset.html 
-- ao.myWidget.js 
-
-Then you can construct the widget like so: 
-*/
-
-
-//ao.myWidget.js file: 
+//ao.myWidget.js file:
 define("ao.myWidget", ["jquery", "text!templates/asset.html", "jquery-ui.custom.min","jquery.tmpl"], function ($, assetHtml) {
 
-    //define your widget under a namespace of your choice
-    //'ao' is used here as a demonstration 
+    // define your widget under a namespace of your choice
+    // 'ao' is used here as a demonstration
     $.widget( "ao.myWidget", { 
 
-        //Options to be used as defaults
+        // Options to be used as defaults
         options: {}, 
 
-        //Setup widget (eg. element creation, apply theming, bind events etc.)
+        // Set up widget (e.g. create element, apply theming,
+        // bind events, etc.)
         _create: function () {
 
-            // _create will automatically run the first time this widget is called
-            // Put the initial widget setup code here, then you can access the element 
-            // on which the widget was called via this.element
-            // The options defined above can be accessed via this.options
+            // _create will automatically run the first time
+            // this widget is called. Put the initial widget
+            // set-up code here, then you can access the element
+            // on which the widget was called via this.element.
+            // The options defined above can be accessed via
+            // this.options
 
             //this.element.addStuff();
             //this.element.addStuff();
-            //this.element.tmpl(assetHtml).appendTo(this.content); 
+            //this.element.tmpl(assetHtml).appendTo(this.content);
         },
 
-        //Destroy an instantiated plugin and clean-up modifications the widget has made to the DOM
+        // Destroy an instantiated plugin and clean up modifications
+        // that the widget has made to the DOM
         destroy: function () {
-            //this.element.removeStuff();
-            // For UI 1.8, destroy must be invoked from the base widget
+            //t his.element.removeStuff();
+            // For UI 1.8, destroy must be invoked from the base
+            // widget
             $.Widget.prototype.destroy.call( this );
-            // For UI 1.9, define _destroy instead and don't worry about calling the base widget
+            // For UI 1.9, define _destroy instead and don't worry
+            // about calling the base widget
         },
 
         methodB: function ( event ) {
-            //_trigger dispatches callbacks the plugin user can subscribe to
-            //signature: _trigger(type, event, objectOfKeyValuePairsToPassToCallback)
+            // _trigger dispatches callbacks the plugin user can
+            // subscribe to
+            //signature: _trigger( "callbackName" , [eventObject],
+            // [uiObject] )
             this._trigger('methodA', event, {
                 key: value
             });
@@ -76,20 +81,18 @@ define("ao.myWidget", ["jquery", "text!templates/asset.html", "jquery-ui.custom.
                 break;
             }
 
-            // For UI 1.8, _setOption must be manually invoked from the base widget
+            // For UI 1.8, _setOption must be manually invoked from
+            // the base widget
             $.Widget.prototype._setOption.apply( this, arguments );
             // For UI 1.9 the _super method can be used instead
             //this._super( "_setOption", key, value );
         }
 
-        //somewhere assetHtml would be used for templating, depending on your choice.
-    }); 
+        //somewhere assetHtml would be used for templating, depending
+        // on your choice.
+    });
 }); 
 
-/*
-If you are going to use the RequireJS optimizer to combine files  together, you can 
-leave off the "ao.myWidget" argument to define: 
-define(["jquery", "text!templates/asset.html", "jquery-ui.custom.min"], ..... 
-*/
-
-
+// If you are going to use the RequireJS optimizer to combine files
+// together, you can leave off the "ao.myWidget" argument to define:
+// define(["jquery", "text!templates/asset.html", "jquery-ui.custom.min"], …

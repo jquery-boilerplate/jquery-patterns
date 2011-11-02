@@ -1,5 +1,12 @@
 ##Recommended jQuery Plugin Patterns
 
+###Blog post
+
+The best source of information for this repository is available in the Smashing Magazine post on it:
+http://coding.smashingmagazine.com/2011/10/11/essential-jquery-plugin-patterns/
+
+In the future this guide will be moved to a repo wiki for easier access and updates.
+
 ###Introduction
 
 So, you've tried your hand at writing jQuery plugins and you're comfortable putting together something that probably works. Awesome!. Thing is, you think there might be better ways you could be writing them - you've seen them done a number of different ways in the wild, but aren't really sure what the differences between these patterns are or how to get started with them. This project hopes to help solve this.
@@ -23,6 +30,7 @@ This project won't seek to provide solutions to every possible pattern, but will
 <li><strong>Extend pattern</strong> - jquery.extend-skeleton.plugin-boilerplate.js</li>
 <li><strong>Non Widget-factory widget</strong>: if you wish to stay away from the widget factory. Uses Ben Alman's simplewidget including coverage for creation, instantiation and other best practices that may be helpful  - jquery.simplewidget.plugin-boilerplate.js</li>
 <li><strong>Prototypal inheritance pattern</strong>: use a bridge to generate a plugin from an object (literal). Useful for code organization, readability, functionality heavily based around DOM element selection - jquery.prototypal-inheritance.plugin-boilerplate.js</li>
+<li><strong>Universal Module Definition pattern</strong>: create AMD and CommonJS compatible plugin modules which are compatible with a number of different script loaders - amd+commonjs</li>
 </ul>
 
 

@@ -5,10 +5,9 @@
  * Licensed under the MIT license
  */
 
-
-// Note that with this pattern, as per Sexton's, the plugin logic
-// hasn't been nested inside a jQuery plugin. Instead, we just use
-// jQuery for the instantiation of it.
+// Note that with this pattern, as per Alex Sexton's, the plugin logic
+// hasn't been nested in a jQuery plugin. Instead, we just use
+// jQuery for its instantiation.
 
 ;(function( $, window, document, undefined ){
 
@@ -18,9 +17,9 @@
       this.$elem = $(elem);
       this.options = options;
 
-      // this next line takes advantage of HTML5 data attributes
-      // to support customization with the plugin on a per-element
-      // basis. eg
+      // This next line takes advantage of HTML5 data attributes
+      // to support customization of the plugin on a per-element
+      // basis. For example,
       // <div class=item' data-plugin-options='{"message":"Goodbye World!"}'></div>
       this.metadata = this.$elem.data( 'plugin-options' );
     };
@@ -32,15 +31,17 @@
     },
 
     init: function() {
-      // Introduce defaults that can be extended either globally or using an 
-      // an object literal. 
-      this.config = $.extend({}, this.defaults, this.options, this.metadata);
+      // Introduce defaults that can be extended either
+      // globally or using an object literal.
+      this.config = $.extend({}, this.defaults, this.options,
+      this.metadata);
 
       // Sample usage:
       // Set the message per instance:
       // $('#elem').plugin({ message: 'Goodbye World!'});
       // or
-      // var p = new Plugin(document.getElementById('elem'), { message: 'Goodbye World!'}).init()
+      // var p = new Plugin(document.getElementById('elem'),
+      // { message: 'Goodbye World!'}).init()
       // or, set the global default message:
       // Plugin.defaults.message = 'Goodbye World!'
 
@@ -64,4 +65,4 @@
 
   //optional: window.Plugin = Plugin;
 
-})( jQuery, window );
+})( jQuery, window , document );

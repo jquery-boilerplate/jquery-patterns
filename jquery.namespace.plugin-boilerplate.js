@@ -20,19 +20,20 @@
         base.el = el;
 
         // Add a reverse reference to the DOM object
-        base.$el.data("myNamespace.myPluginName", base);
+        base.$el.data( "myNamespace.myPluginName" , base );
 
         base.init = function () {
             base.myFunctionParam = myFunctionParam;
 
-            base.options = $.extend({}, $.myNamespace.myPluginName.defaultOptions, options);
+            base.options = $.extend({},
+            $.myNamespace.myPluginName.defaultOptions, options);
 
             // Put your initialization code here
         };
 
         // Sample Function, Uncomment to use
-        // base.functionName = function(paramaters){
-        // 
+        // base.functionName = function( paramaters ){
+        //
         // };
         // Run initializer
         base.init();
@@ -42,9 +43,11 @@
         myDefaultValue: ""
     };
 
-    $.fn.mynamespace_myPluginName = function ( myFunctionParam, options ) {
+    $.fn.mynamespace_myPluginName = function
+        ( myFunctionParam, options ) {
         return this.each(function () {
-            (new $.myNamespace.myPluginName(this, myFunctionParam, options));
+            (new $.myNamespace.myPluginName(this,
+            myFunctionParam, options));
         });
     };
 
