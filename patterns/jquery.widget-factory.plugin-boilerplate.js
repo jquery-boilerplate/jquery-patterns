@@ -13,7 +13,7 @@
     // existing widget prototype to inherit from, an object
     // literal to become the widget's prototype ); 
 
-    $.widget( "namespace.widgetname" , {
+    $.widget( "namespace.widgetName" , {
 
         //Options to be used as defaults
         options: {
@@ -52,14 +52,12 @@
             // [uiObject] )
             // eg. this._trigger( "hover", e /*where e.type ==
             // "mouseenter"*/, { hovered: $(e.target)});
-            this._trigger('methodA', event, {
-                key: value
-            });
+            console.log('methodB called');
         },
 
         methodA: function ( event ) {
             this._trigger('dataChanged', event, {
-                key: value
+                key: 'someValue'
             });
         },
 

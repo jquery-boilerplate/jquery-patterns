@@ -1,7 +1,7 @@
 /*!
  * jQuery extend-based plugin boilerplate
  * Author: @oscargodson
- * Further changes: @timmywil
+ * Further changes: @timmywil, @addyosmani
  * Licensed under the MIT license
  */
 

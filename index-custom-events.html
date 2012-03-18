@@ -1,0 +1,19 @@
+<html>
+<head>
+	<title>jQuery Plugin Patterns</title>
+
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="patterns/jquery.customevents.plugin-boilerplate.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+	$(function(){
+
+		console.log($('body').eventStatus());
+		$('body').eventStatus().trigger('myEventStart');
+	});
+</script>
+
+</body>
+</html>

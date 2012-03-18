@@ -18,7 +18,9 @@
 // Then you can construct the widget like so: 
 
 //ao.myWidget.js file:
-define("ao.myWidget", ["jquery", "text!templates/asset.html", "jquery-ui.custom.min","jquery.tmpl"], function ($, assetHtml) {
+//Uncomment this version for a sample using templates
+//define("ao.myWidget", ["jquery", "text!templates/asset.html", "jquery-ui.custom.min","jquery.tmpl"], function ($, assetHtml) {
+define("ao.myWidget", ["jquery", "jqueryui"], function ($) {
 
     // define your widget under a namespace of your choice
     // 'ao' is used here as a demonstration
@@ -59,14 +61,12 @@ define("ao.myWidget", ["jquery", "text!templates/asset.html", "jquery-ui.custom.
             // subscribe to
             //signature: _trigger( "callbackName" , [eventObject],
             // [uiObject] )
-            this._trigger('methodA', event, {
-                key: value
-            });
+            console.log('methodB called');
         },
 
         methodA: function ( event ) {
             this._trigger('dataChanged', event, {
-                key: value
+                key: 'someValue'
             });
         },
 

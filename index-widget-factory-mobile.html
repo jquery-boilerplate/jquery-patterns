@@ -1,0 +1,24 @@
+<html>
+<head>
+	<title>jQuery Plugin Patterns</title>
+
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	
+	<script type="text/javascript" src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>
+
+	<script type="text/javascript" src="patterns/jquery.widget-factory.mobile-plugin.boilerplate.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+	$(function(){
+		var instance = ($('body').widgetName({
+			foo: false
+		}));
+		console.log(instance);
+
+		instance.widgetName('methodB');
+	});
+</script>
+
+</body>
+</html>

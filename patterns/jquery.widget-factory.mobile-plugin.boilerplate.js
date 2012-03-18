@@ -31,13 +31,13 @@
         },
 
         // Private methods/props start with underscores
-        _dosomething: function(){ ... },
+        _dosomething: function(){  },
 
         // Public methods like these below can can be called
                 // externally:
         // $("#myelem").foo( "enable", arguments );
 
-        enable: function() { ... },
+        enable: function() {  },
 
         // Destroy an instantiated plugin and clean up modifications
         // the widget has made to the DOM
@@ -57,14 +57,13 @@
             //  [uiObject] )
             // eg. this._trigger( "hover", e /*where e.type ==
             // "mouseenter"*/, { hovered: $(e.target)});
-            this._trigger('methodA', event, {
-                key: value
-            });
+            console.log('method B called');
+            //this.methodA();
         },
 
         methodA: function ( event ) {
             this._trigger('dataChanged', event, {
-                key: value
+                key: 'someValue'
             });
         },
 
@@ -72,10 +71,12 @@
         _setOption: function ( key, value ) {
             switch (key) {
             case "someValue":
-                //this.options.someValue = doSomethingWith( value );
+                // this is all optional
+                this.options.someValue = doSomethingWith( value );
                 break;
             default:
-                //this.options[ key ] = value;
+                // optional
+                this.options[ key ] = value;
                 break;
             }
 
