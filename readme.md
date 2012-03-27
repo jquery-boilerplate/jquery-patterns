@@ -2,10 +2,9 @@
 
 ###Blog post
 
-The best source of information for this repository is available in the Smashing Magazine post on it:
-http://coding.smashingmagazine.com/2011/10/11/essential-jquery-plugin-patterns/
+The best source of information for how to use the plugins in this repository can be found here:
 
-In the future this guide will be moved to a repo wiki for easier access and updates.
+[http://addyosmani.com/resources/essentialjsdesignpatterns/book/#jquerypluginpatterns](http://addyosmani.com/resources/essentialjsdesignpatterns/book/#jquerypluginpatterns)
 
 ###Introduction
 
