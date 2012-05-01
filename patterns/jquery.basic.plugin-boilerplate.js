@@ -46,11 +46,20 @@
         this.init();
     }
 
-    Plugin.prototype.init = function () {
-        // Place initialization logic here
-        // You already have access to the DOM element and
-        // the options via the instance, e.g. this.element
-        // and this.options
+    Plugin.prototype = {
+        
+        init = function () {
+            // Place initialization logic here
+            // You already have access to the DOM element and
+            // the options via the instance, e.g. this.element
+            // and this.options
+            // you can add more functions like the one below and 
+            // call them like so: this.yourotherfunction(this.element, this.options).
+        }, 
+        
+        yourotherfunction(el, options) {
+            // some logic
+        }
     };
 
     // A really lightweight plugin wrapper around the constructor,
