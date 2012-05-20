@@ -48,16 +48,16 @@
 
     Plugin.prototype = {
         
-        init = function () {
+        init: function() {
             // Place initialization logic here
             // You already have access to the DOM element and
             // the options via the instance, e.g. this.element
             // and this.options
             // you can add more functions like the one below and 
-            // call them like so: this.yourotherfunction(this.element, this.options).
+            // call them like so: this.yourOtherFunction(this.element, this.options).
         }, 
         
-        yourotherfunction(el, options) {
+        yourOtherFunction: function(el, options) {
             // some logic
         }
     };
