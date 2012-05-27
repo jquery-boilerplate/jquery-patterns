@@ -1,11 +1,5 @@
 ##Recommended jQuery Plugin Patterns
 
-###Blog post
-
-The best source of information for how to use the plugins in this repository can be found here:
-
-[http://addyosmani.com/resources/essentialjsdesignpatterns/book/#jquerypluginpatterns](http://addyosmani.com/resources/essentialjsdesignpatterns/book/#jquerypluginpatterns)
-
 ###Introduction
 
 So, you've tried your hand at writing jQuery plugins and you're comfortable putting together something that probably works. Awesome!. Thing is, you think there might be better ways you could be writing them - you've seen them done a number of different ways in the wild, but aren't really sure what the differences between these patterns are or how to get started with them. This project hopes to help solve this.
@@ -33,33 +27,18 @@ This project won't seek to provide solutions to every possible pattern, but will
 </ul>
 
 
+###Further reading:
+
+The best source of information for how to use the plugins in this repository can be found here:
+
+[http://addyosmani.com/resources/essentialjsdesignpatterns/book/#jquerypluginpatterns](http://addyosmani.com/resources/essentialjsdesignpatterns/book/#jquerypluginpatterns)
+
+
+
 ###Contributing
 
 If you have ideas for improvements that can be made to patterns currently in the repo, please feel free to create a new issue for discussion or send a pull request upstream. The same can be said about new patterns you wish to propose being added; for the sake of limiting confusion and complexity, I would ideally like to keep the number of overall patterns in the repo, but there are plans to separate these out into folders based on concerns. 
 
-###Coming soon
-
-####AMD/UMD-compatible plugin and widget boilerplates
-
-Whilst the current repo provides examples for patterns you can use to create jQuery plugins, this is really only the beginning. @thomasdavis, I and a few other developers are currently discussing ways that we can define AMD/UMD-compatible widget and plugin modules which would offer a cleaner way to easily extend plugins/widgets than what we have available right now. 
-
-We want to define a boilerplate for solving this which works with AMD-compatible loaders such as RequireJS and retains the principles of modular development at heart. To follow the discussion or get involved, checkout https://github.com/addyosmani/jquery-plugin-patterns/issues/1.
-
-####Improved examples demonstrating usage of patterns. Further documentation on why particular patterns should be used.
-
 ###Credits
 Thanks to @peolanha, @ajpiano, @mathias, @cowboy, @dougneiner and others for their previous work (or tips) in this area. Some of this work is used as a basis for further improvements.
-
-###Further reading
-
-<ul>
-<li><a href="http://msdn.microsoft.com/en-us/scriptjunkie/ff696759">Style in jQuery plugins and why it matters</a></li>
-<li><a href="http://alexsexton.com/?p=51">Using inheritance patterns to organize large jQuery applications</a></li>
-<li><a href="http://benalman.com/talks/jquery-pluginization.html">jQuery Pluginization by Ben Alman</a></li>
-<li><a href="http://fuelyourcoding.com/jquery-plugin-design-patterns-part-i/">jQuery Plugin design patterns</a></li>
-<li><a href="http://ajpiano.com/widgetfactory/#slide1">The jQuery UI Widet Factory - Wat? By Adam Sontag</a></li>
-<li><a href="http://docs.jquery.com/UI_Developer_Guide">jQuery UI developer's guide (incl. coverage of the widget factory)</a></li>
-<li><a href="http://www.learningjquery.com/2007/10/a-plugin-development-pattern">A Plugin development pattern</a></li>
-<li><a href="http://tagneto.blogspot.com/2011/01/jquery-ui-as-amd-modules-for-use-in.html">jQuery UI as AMD modules</a></li>
-</ul>
 
