@@ -47,22 +47,22 @@
     }
 
     Plugin.prototype = {
-        
-        init: function () {
+
+        init: function() {
             // Place initialization logic here
             // You already have access to the DOM element and
             // the options via the instance, e.g. this.element
             // and this.options
-            // you can add more functions like the one below and 
-            // call them like so: this.yourotherfunction(this.element, this.options).
-        }, 
-        
-        yourOtherFunction: function (el, options) {
+            // you can add more functions like the one below and
+            // call them like so: this.yourOtherFunction(this.element, this.options).
+        },
+
+        yourOtherFunction: function(el, options) {
             // some logic
         }
     };
 
-    // A really lightweight plugin wrapper around the constructor, 
+    // A really lightweight plugin wrapper around the constructor,
     // preventing against multiple instantiations and allowing any
     // public function (ie. a function whose name doesn't start
     // with an underscore) to be called via the jQuery plugin,
