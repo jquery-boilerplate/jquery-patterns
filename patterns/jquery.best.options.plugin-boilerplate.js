@@ -27,7 +27,7 @@
 			return defaults.methodName = $.isPlainObject(options) && !$.isEmptyObject(options) ? $.extend(defaults.methodName, options) : defaults.methodName;
 		},
 
-		// Creates a optional object to store info of the methods (Sample: version, required, deprecated)
+		// Creates a optional object to store info of the methods (Example: version, required, deprecated)
 		// Use: jQuery.methodNameInfo.property;
 		methodNameInfo : {
 			property : 'value'
