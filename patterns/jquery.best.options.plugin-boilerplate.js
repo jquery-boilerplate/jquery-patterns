@@ -31,7 +31,7 @@
     // that are available in case the user doesn't pass in all
     // of the values expected. The user is given a default
     // experience but can also override the values as necessary.
-    // eg. $fn.pluginName.key ='otherval';
+    // eg. $.fn.pluginName.key ='otherval';
 
     $.fn.pluginName.options = {
 
