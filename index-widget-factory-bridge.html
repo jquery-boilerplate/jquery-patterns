@@ -2,32 +2,30 @@
 <head>
 	<title>jQuery Plugin Patterns</title>
 
-	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>
-
-	<script type="text/javascript" src="patterns/jquery.widget-factory.bridge.boilerplate.js"></script>
+	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>
+	<script src="patterns/jquery.widget-factory.bridge.boilerplate.js"></script>
 </head>
 <body>
 <script type="text/javascript">
 	$(function(){
 
 		// connect the widget obj to jQuery's API under the "foo" namespace
-		 $.widget.bridge("foo", widgetName);
+		$.widget.bridge("foo", widgetName);
 
 		// create an instance of the widget for use
-		 var instance = $('body').foo({
+		var instance = $('body').foo({
 		     baz: true
-		 });
+		});
 
 		// your widget instance exists in the elem's data
-		 console.log(instance.data("foo").element); // => #elem element
+		console.log(instance.data("foo").element); // => #elem element
 
 		// bridge allows you to call public methods...
-		 instance.foo("publicFunction"); // => "public method"
+		instance.foo("publicFunction"); // => "public method"
 
 		// bridge prevents calls to internal methods
-		 instance.foo("_privateFunction"); // => #elem element
+		instance.foo("_privateFunction"); // => #elem element
 
 	});
 </script>
