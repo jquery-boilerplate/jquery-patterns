@@ -10,46 +10,41 @@ This project won't seek to provide implementations for every possible pattern, b
 
 ###Patterns 
 
--   **A lightweight start**: perfect as a generic template for beginners
+-   **[A lightweight start](patterns/jquery.basic.plugin-boilerplate.js)**: perfect as a generic template for beginners
     and above, uses a basic defaults object, simple constructor for
     assigning the element to work with and extending options with
     defaults and a lightweight wrapper around the constructor to avoid
-    issues with multiple instantiations -
-    jquery.basic.plugin-boilerplate.js
--   **Widget factory**: for building complex, stateful plugins based on
+    issues with multiple instantiations
+-   **[Widget factory](patterns/jquery.widget-factory.plugin-boilerplate.js)**: for building complex, stateful plugins based on
     object-oriented principles. The majority of jQueryUI heavily relies
     on the widget factory as a base for components and this template
     covers almost all supported default methods including triggering
-    events - jquery.widget-factory.plugin-boilerplate.js
--   **Widget factory + RequireJS**: for wrapping jQueryUI widgets inside
+    events
+-   **[Widget factory + RequireJS](patterns/jquery.widget-factory.requirejs.boilerplate.js)**: for wrapping jQueryUI widgets inside
     RequireJS compatible modules. Also demonstrates very basic widget
-    templating - jquery.widget-factory.requirejs.boilerplate.js
--   **Widget factory for jQuery mobile** - demonstrating best practices
+    templating
+-   **[Widget factory for jQuery mobile](patterns/jquery.widget-factory.mobile-plugin.boilerplate.js)** - demonstrating best practices
     for building mobile widgets, includes many of the same concepts as
     the widget factory boilerplate, but also JQM specific usage
-    advice/tips in the comments -
-    jquery.widget-factory.mobile-plugin.boilerplate.js
--   **Namespaced pattern**: to avoid collisions and improve code
-    organization when working with components under another namespace -
-    jquery.namespace.plugin-boilerplate.js
--   **Better options**: globally/Per-call overridable options for
+    advice/tips in the comments
+-   **[Namespaced pattern](patterns/jquery.namespace.plugin-boilerplate.js)**: to avoid collisions and improve code
+    organization when working with components under another namespace
+-   **[Better options](patterns/jquery.best-options.plugin-boilerplate.js)**: globally/Per-call overridable options for
     greater option customization, based on Ben Almans pluginization talk
-    - jquery.best-options.plugin-boilerplate.js
--   **Custom events (Pseudo Pub/Sub)**: for better application
+-   **[Custom events (Pseudo Pub/Sub)](patterns/jquery.customevents.plugin-boilerplate.js)**: for better application
     decoupling. Uses the Widget factory, but could be applied to the
-    generic template - jquery.customevents.plugin-boilerplate.js
--   **Extend pattern** - jquery.extend-skeleton.plugin-boilerplate.js
--   **Non Widget-factory widget**: if you wish to stay away from the
+    generic template
+-   **[Extend pattern](patterns/jquery.extend-skeleton.plugin-boilerplate.js)**: Extended options
+-   **[Non Widget-factory widget](patterns/jquery.simplewidget.plugin-boilerplate.js])**: if you wish to stay away from the
     widget factory. Uses Ben Alman’s simplewidget including coverage for
     creation, instantiation and other best practices that may be helpful
-    - jquery.simplewidget.plugin-boilerplate.js
--   **Prototypal inheritance pattern**: use a bridge to generate a
+-   **[Prototypal inheritance pattern](patterns/jquery.prototypal-inheritance.plugin-boilerplate.js)**: use a bridge to generate a
     plugin from an object (literal). Useful for code organization,
     readability, functionality heavily based around DOM element
-    selection - jquery.prototypal-inheritance.plugin-boilerplate.js
--   **Universal Module Definition pattern**: create AMD and CommonJS
+    selection
+-   **[Universal Module Definition pattern](patterns/amd%2Bcommonjs/pluginCore.js)**: create AMD and CommonJS
     compatible plugin modules which are compatible with a number of
-    different script loaders - amd+commonjs
+    different script loaders. You may also be interested in the [UMD](https://github.com/umdjs) project.
 
 
 ###Further reading:
