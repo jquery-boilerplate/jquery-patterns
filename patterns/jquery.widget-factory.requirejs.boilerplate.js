@@ -17,10 +17,10 @@
 
 // Then you can construct the widget like so: 
 
-//ao.myWidget.js file:
-//Uncomment this version for a sample using templates
-//define("ao.myWidget", ["jquery", "text!templates/asset.html", "jquery-ui.custom.min","jquery.tmpl"], function ($, assetHtml) {
-define("ao.myWidget", ["jquery", "jqueryui"], function ($) {
+// ao.myWidget.js file:
+// Uncomment this version for a sample using templates
+// define(["jquery", "text!templates/asset.html", "jquery-ui.custom.min","jquery.tmpl"], function ($, assetHtml) {
+define(["jquery", "jqueryui"], function ($) {
 
     // define your widget under a namespace of your choice
     // 'ao' is used here as a demonstration
