@@ -47,30 +47,42 @@
     }
 
     Plugin.prototype = {
-        
+
         init: function() {
             // Place initialization logic here
             // You already have access to the DOM element and
             // the options via the instance, e.g. this.element
             // and this.options
-            // you can add more functions like the one below and 
+            // you can add more functions like the one below and
             // call them like so: this.yourOtherFunction(this.element, this.options).
-        }, 
-        
+        },
+
         yourOtherFunction: function(el, options) {
             // some logic
         }
     };
 
     // A really lightweight plugin wrapper around the constructor,
-    // preventing against multiple instantiations
+    // preventing against multiple instantiations and allowing any
+    // public function (ie. a function whose name doesn't start
+    // with an underscore) to be called via the jQuery plugin,
+    // e.g. $(element).defaultPluginName('functionName', arg1, arg2)
     $.fn[pluginName] = function ( options ) {
-        return this.each(function () {
-            if (!$.data(this, 'plugin_' + pluginName)) {
-                $.data(this, 'plugin_' + pluginName,
-                new Plugin( this, options ));
-            }
-        });
+        var args = arguments;
+        if (options === undefined || typeof options === 'object') {
+            return this.each(function () {
+                if (!$.data(this, 'plugin_' + pluginName)) {
+                    $.data(this, 'plugin_' + pluginName, new Plugin( this, options ));
+                }
+            });
+        } else if (typeof options === 'string' && options[0] !== '_' && options !== 'init') {
+            return this.each(function () {
+                var instance = $.data(this, 'plugin_' + pluginName);
+                if (instance instanceof Plugin && typeof instance[options] === 'function') {
+                    instance[options].apply( instance, Array.prototype.slice.call( args, 1 ) );
+                }
+            });
+        }
     }
 
 })( jQuery, window, document );
