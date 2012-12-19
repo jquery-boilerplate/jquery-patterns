@@ -30,8 +30,8 @@ This project won't seek to provide implementations for every possible pattern, b
 -   **[Namespaced pattern](https://github.com/jquery-boilerplate/patterns/blob/master/patterns/jquery.namespace.plugin-boilerplate.js)**: to avoid collisions and improve code
     organization when working with components under another namespace
 -   **[Better options](https://github.com/jquery-boilerplate/patterns/blob/master/patterns/jquery.best-options.plugin-boilerplate.js)**: globally/Per-call overridable options for
-    greater option customization, based on Ben Almans pluginization talk
--   **[Custom events (Pseudo Pub/Sub)](https://github.com/jquery-boilerplate/patterns/blob/master/patterns/jquery.customevents.plugin-boilerplate.js)**: for better application
+    greater option customization, based on Ben Almans [pluginization](http://benalman.com/talks/jquery-pluginization.html) talk
+-   **[Custom events (Publish/Subscribe)](https://github.com/jquery-boilerplate/patterns/blob/master/patterns/jquery.customevents.plugin-boilerplate.js)**: for better application
     decoupling. Uses the Widget factory, but could be applied to the
     generic template
 -   **[Extend pattern](https://github.com/jquery-boilerplate/patterns/blob/master/patterns/jquery.extend-skeleton.plugin-boilerplate.js)**: Extended options
