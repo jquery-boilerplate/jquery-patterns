@@ -1,44 +1,35 @@
-/*!
- * jQuery 'best options' plugin boilerplate
- * Author: @cowboy
- * Further changes: @addyosmani
- * Licensed under the MIT license
- */
+/* [URL] */
+;(function(defaults, $, window, document, undefined) {
 
-;(function ( $, window, document, undefined ) {
+	$.extend({
+		// Function to change the default properties of the plugin
+		// Usage:
+		// jQuery(selector).pluginSetup({property:'CustomValue'});
+		pluginSetup : function(options) {
 
-    $.fn.pluginName = function ( options ) {
+			return $.extend(defaults, options);
+		}
+	}).fn.extend({
+		pluginName : function(options) {
 
-        // Here's a best practice for overriding 'defaults'
-        // with specified options. Note how, rather than a
-        // regular defaults object being passed as the second
-        // parameter, we instead refer to $.fn.pluginName.options
-        // explicitly, merging it with the options passed directly
-        // to the plugin. This allows us to override options both
-        // globally and on a per-call level. 
+			options = $.extend({}, defaults, options);
 
-        options = $.extend( {}, $.fn.pluginName.options, options );
+			return $(this).each(function() {
 
-        return this.each(function () {
+				// Plugin logic
+				// Calling the function:
+				// jQuery(selector).pluginName(options);
+			});
+		},
 
-            var elem = $(this);
+		otherMethod : function(options) {
 
-        });
-    };
-
-    // Globally overriding options
-    // Here are our publicly accessible default plugin options
-    // that are available in case the user doesn't pass in all
-    // of the values expected. The user is given a default
-    // experience but can also override the values as necessary.
-    // eg. $.fn.pluginName.key ='otherval';
-
-    $.fn.pluginName.options = {
-
-        key: "value",
-        myMethod: function ( elem, param ) {
-
-        }
-    };
-
-})( jQuery, window, document );
+			// Some logic
+			// Calling the function:
+			// jQuery(selector).otherMethod(options);
+		}
+	});
+})({
+	property : 'value',
+	otherProperty : 'value'
+}, jQuery, window, document);
