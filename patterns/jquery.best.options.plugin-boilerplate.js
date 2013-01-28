@@ -4,12 +4,14 @@
 	$.extend({
 		// Function to change the default properties of the plugin
 		// Usage:
-		// jQuery(selector).pluginSetup({property:'CustomValue'});
+		// jQuery.pluginSetup({property:'Custom value'});
 		pluginSetup : function(options) {
 
 			return $.extend(defaults, options);
 		}
 	}).fn.extend({
+		// Usage:
+		// jQuery(selector).pluginName({property:'value'});
 		pluginName : function(options) {
 
 			options = $.extend({}, defaults, options);
