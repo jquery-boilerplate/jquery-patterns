@@ -1,34 +1,36 @@
+<!DOCTYPE html>
 <html>
-<head>
-	<title>jQuery Plugin Patterns</title>
+	<head>
+		<title>Widget Factory Bridge</title>
 
-	<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>
-	<script src="patterns/jquery.widget-factory.bridge.boilerplate.js"></script>
-</head>
-<body>
-<script type="text/javascript">
-	$(function(){
+		<script src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
 
-		// connect the widget obj to jQuery's API under the "foo" namespace
-		$.widget.bridge("foo", widgetName);
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/jquery-ui.min.js"></script>
 
-		// create an instance of the widget for use
-		var instance = $('body').foo({
-		     baz: true
-		});
+		<script src="patterns/jquery.widget-factory.bridge.boilerplate.js"></script>
+	</head>
 
-		// your widget instance exists in the elem's data
-		console.log(instance.data("foo").element); // => #elem element
+	<body>
+		<script>
+			$(function() {
 
-		// bridge allows you to call public methods...
-		instance.foo("publicFunction"); // => "public method"
+				// Connect the widget obj to jQuery's API under the "foo" namespace
+				$.widget.bridge('foo', widgetName);
 
-		// bridge prevents calls to internal methods
-		instance.foo("_privateFunction"); // => #elem element
+				// Create an instance of the widget for use
+				var instance = $('body').foo({
+					baz: true
+				});
 
-	});
-</script>
+				// Your widget instance exists in the elem's data
+				console.log(instance.data('foo').element); // => #elem element
 
-</body>
+				// Bridge allows you to call public methods...
+				instance.foo('publicFunction'); // => "public method"
+
+				// Bridge prevents calls to internal methods
+				instance.foo('_privateFunction'); // => #elem element
+			});
+		</script>
+	</body>
 </html>

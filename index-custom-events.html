@@ -1,19 +1,23 @@
+<!DOCTYPE html>
 <html>
-<head>
-	<title>jQuery Plugin Patterns</title>
+	<head>
+		<title>Custom events</title>
 
-	<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>
-	<script src="patterns/jquery.customevents.plugin-boilerplate.js"></script>
-</head>
-<body>
-<script>
-	$(function(){
+		<script src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
 
-		console.log($('body').eventStatus());
-		$('body').eventStatus().trigger('myEventStart');
-	});
-</script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/jquery-ui.min.js"></script>
 
-</body>
+		<script src="patterns/jquery.customevents.plugin-boilerplate.js"></script>
+	</head>
+
+	<body>
+		<script>
+			$(function() {
+
+				console.log($('body').eventStatus());
+
+				$('body').eventStatus().trigger('myEventStart');
+			});
+		</script>
+	</body>
 </html>
