@@ -23,13 +23,13 @@
 				});
 
 				// Your widget instance exists in the elem's data
-				console.log(instance.data("foo").element); // => #elem element
+				console.log(instance.data('foo').element); // => #elem element
 
 				// Bridge allows you to call public methods...
-				instance.foo("publicFunction"); // => "public method"
+				instance.foo('publicFunction'); // => "public method"
 
 				// Bridge prevents calls to internal methods
-				instance.foo("_privateFunction"); // => #elem element
+				instance.foo('_privateFunction'); // => #elem element
 			});
 		</script>
 	</body>
