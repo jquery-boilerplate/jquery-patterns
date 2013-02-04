@@ -31,6 +31,8 @@
 			otherMethod : function(options) {
 
 				// Your logic
+				// Calling the function:
+				// jQuery(selector).pluginName('otherMethod');
 			}
 		};
 
@@ -45,9 +47,9 @@
 
 		options = $.extend({}, defaults, options);
 
-		return $(this).each(function() {
+		return $(this)[name]('destroy').data(dataName, options).each(function() {
 
-			methods.init.call($(this).data(dataName, options), options);
+			methods.init.call(this, options);
 		});
 	}
 
