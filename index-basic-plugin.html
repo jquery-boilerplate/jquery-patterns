@@ -11,10 +11,10 @@
 	<body>
 		<script>
 			// Calling the plugin
-			$('body').pluginName();
+			$(document).pluginName();
 
 			// Get options
-			$('body').data('pluginPluginName');
+			$(document).data('pluginPluginName');
 
 			// Changes the default properties
 			$.pluginNameSetup({
@@ -22,10 +22,10 @@
 			});
 
 			// Calling a method of the plugin
-			$('body').pluginName('otherMethod'/*, optionalParam*/);
+			$(document).pluginName('otherMethod'/*, optionalParam*/);
 
 			// Destroy the plugin
-			$('body').pluginName('destroy');
+			$(document).pluginName('destroy');
 		</script>
 	</body>
 </html>
