@@ -10,25 +10,22 @@
 
 	<body>
 		<script>
-			$(function() {
+			// Calling the plugin
+			$('body').pluginName();
 
-				// Calling the plugin
-				$('body').pluginName();
+			// Get options
+			$('body').data('pluginPluginName');
 
-				// Get options
-				$('body').data('pluginPluginName');
-
-				// Changes the default properties
-				$.pluginNameSetup({
-					property : 'Custom value'
-				});
-
-				// Calling a method of the plugin
-				$('body').pluginName('otherMethod');
-
-				// Destroy the plugin
-				$('body').pluginName('destroy');
+			// Changes the default properties
+			$.pluginNameSetup({
+				property : 'Custom value'
 			});
+
+			// Calling a method of the plugin
+			$('body').pluginName('otherMethod'/*, optionalParam*/);
+
+			// Destroy the plugin
+			$('body').pluginName('destroy');
 		</script>
 	</body>
 </html>
