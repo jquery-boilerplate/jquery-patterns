@@ -51,7 +51,7 @@
 
 			methods.init.call(this, options);
 		});
-	}
+	};
 
 	// An optional function to change the default properties of the plugin
 	// Usage:
