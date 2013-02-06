@@ -42,14 +42,14 @@
 
 			var method = methods[options];
 
-			return $.isFunction(method) ? method.apply(this, param) : false;
+			return $.isFunction(method) ? method.call(this, param) : false;
 		}
 
 		options = $.extend({}, defaults, options);
 
 		return $(this)[name]('destroy').data(dataName, options).each(function() {
 
-			methods.init.apply(this, param);
+			methods.init.call(this, param);
 		});
 	};
 
