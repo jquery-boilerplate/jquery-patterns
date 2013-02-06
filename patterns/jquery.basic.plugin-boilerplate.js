@@ -38,20 +38,18 @@
 
 	$.fn[name] = function(options, param) {
 
-		var parameters = arguments;
-
 		if(typeof options === 'string') {
 
 			var method = methods[options];
 
-			return $.isFunction(method) ? method.apply(this, parameters) : false;
+			return $.isFunction(method) ? method.apply(this, param) : false;
 		}
 
 		options = $.extend({}, defaults, options);
 
 		return $(this)[name]('destroy').data(dataName, options).each(function() {
 
-			methods.init.apply(this, parameters);
+			methods.init.apply(this, param);
 		});
 	};
 
