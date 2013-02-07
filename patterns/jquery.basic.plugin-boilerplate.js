@@ -13,12 +13,7 @@
 
 		// The plugin mathods
 		methods = {
-			init : function(options) {
-
-				var
-
-					element = $(this),
-					data = element.data(dataName);
+			init : function(options, element, data) {
 
 				// Plugin logic
 				// Calling the function:
@@ -28,7 +23,7 @@
 
 				return $(this).removeData(dataName).off(namespace);
 			},
-			otherMethod : function(options) {
+			otherMethod : function(options, element, data) {
 
 				// Your logic
 				// Calling the function:
@@ -40,16 +35,25 @@
 
 		if(typeof options === 'string') {
 
-			var method = methods[options];
+			var
 
-			return $.isFunction(method) ? method.call(this, param) : false;
+				method = methods[options],
+				element = $(this).data(dataName, options),
+				data = element.data(dataName);
+
+			return $.isFunction(method) ? method.call(this, param, element, data) : false;
 		}
 
 		options = $.extend({}, defaults, options);
 
-		return $(this)[name]('destroy').data(dataName, options).each(function() {
+		return $(this)[name]('destroy').each(function() {
 
-			methods.init.call(this, param);
+			var
+
+				element = $(this).data(dataName, options),
+				data = element.data(dataName);
+
+			methods.init.call(this, param, element, data);
 		});
 	};
 
