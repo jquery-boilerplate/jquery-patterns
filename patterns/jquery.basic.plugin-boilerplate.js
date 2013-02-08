@@ -1,6 +1,8 @@
 /* [URL] */
 ;(function(defaults, $, window, document, undefined) {
 
+	"use strict";
+
 	var
 
 		// The plugin name
