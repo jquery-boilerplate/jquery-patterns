@@ -1,7 +1,7 @@
 /* [URL] */
 ;(function(defaults, $, window, document, undefined) {
 
-	"use strict";
+	'use strict';
 
 	var
 
