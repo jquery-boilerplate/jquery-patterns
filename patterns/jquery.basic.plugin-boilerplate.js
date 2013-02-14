@@ -1,76 +1,72 @@
-/*!
- * jQuery lightweight plugin boilerplate
- * Original author: @ajpiano
- * Further changes, comments: @addyosmani
- * Licensed under the MIT license
- */
+/* [URL] */
+;(function(defaults, $, window, document, undefined) {
 
-// the semi-colon before the function invocation is a safety
-// net against concatenated scripts and/or other plugins
-// that are not closed properly.
-;(function ( $, window, document, undefined ) {
+	'use strict';
 
-    // undefined is used here as the undefined global
-    // variable in ECMAScript 3 and is mutable (i.e. it can
-    // be changed by someone else). undefined isn't really
-    // being passed in so we can ensure that its value is
-    // truly undefined. In ES5, undefined can no longer be
-    // modified.
+	var
 
-    // window and document are passed through as local
-    // variables rather than as globals, because this (slightly)
-    // quickens the resolution process and can be more
-    // efficiently minified (especially when both are
-    // regularly referenced in your plugin).
+		// The plugin name
+		name = 'pluginName',
 
-    // Create the defaults once
-    var pluginName = 'defaultPluginName',
-        defaults = {
-            propertyName: "value"
-        };
+		dataName = $.camelCase('plugin-' + name),
 
-    // The actual plugin constructor
-    function Plugin( element, options ) {
-        this.element = element;
+		// A namespace to delegate events
+		namespace = '.' + dataName,
 
-        // jQuery has an extend method that merges the
-        // contents of two or more objects, storing the
-        // result in the first object. The first object
-        // is generally empty because we don't want to alter
-        // the default options for future instances of the plugin
-        this.options = $.extend( {}, defaults, options) ;
+		// The plugin mathods
+		methods = {
+			init : function(options, element, data) {
 
-        this._defaults = defaults;
-        this._name = pluginName;
+				// Plugin logic
+				// Calling the function:
+				// jQuery(selector).pluginName();
+			},
+			destroy : function() {
 
-        this.init();
-    }
+				return $(this).removeData(dataName).off(namespace);
+			},
+			otherMethod : function(options, element, data) {
 
-    Plugin.prototype = {
-        
-        init: function() {
-            // Place initialization logic here
-            // You already have access to the DOM element and
-            // the options via the instance, e.g. this.element
-            // and this.options
-            // you can add more functions like the one below and 
-            // call them like so: this.yourOtherFunction(this.element, this.options).
-        }, 
-        
-        yourOtherFunction: function(el, options) {
-            // some logic
-        }
-    };
+				// Your logic
+				// Calling the function:
+				// jQuery(selector).pluginName('otherMethod');
+			}
+		};
 
-    // A really lightweight plugin wrapper around the constructor,
-    // preventing against multiple instantiations
-    $.fn[pluginName] = function ( options ) {
-        return this.each(function () {
-            if (!$.data(this, 'plugin_' + pluginName)) {
-                $.data(this, 'plugin_' + pluginName,
-                new Plugin( this, options ));
-            }
-        });
-    }
+	$.fn[name] = function(options, param) {
 
-})( jQuery, window, document );
+		if(typeof options === 'string') {
+
+			var
+
+				method = methods[options],
+				element = $(this).data(dataName, options),
+				data = element.data(dataName);
+
+			return $.isFunction(method) ? method.call(this, param, element, data) : false;
+		}
+
+		options = $.extend({}, defaults, options);
+
+		return $(this)[name]('destroy').each(function() {
+
+			var
+
+				element = $(this).data(dataName, options),
+				data = element.data(dataName);
+
+			methods.init.call(this, options, element, data);
+		});
+	};
+
+	// An optional function to change the default properties of the plugin
+	// Usage:
+	// jQuery.pluginNameSetup({property:'CustomValue'});
+	$[name + 'Setup'] = function(options) {
+
+		return $.extend(defaults, options);
+	};
+})({
+	property : 'value',
+	otherProperty : 'value'
+}, jQuery, window, document);
