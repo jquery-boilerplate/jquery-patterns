@@ -55,7 +55,7 @@
 				element = $(this).data(dataName, options),
 				data = element.data(dataName);
 
-			methods.init.call(this, param, element, data);
+			methods.init.call(this, options, element, data);
 		});
 	};
 
