@@ -1,6 +1,8 @@
 /* [URL] */
 ;(function(defaults, $, window, document, undefined) {
 
+	'use strict';
+
 	$.extend({
 		// Function to change the default properties of the plugin
 		// Usage:
@@ -23,8 +25,7 @@
 				// jQuery(selector).pluginName(options);
 			});
 		},
-
-		otherMethod : function(options) {
+		otherMethod : function() {
 
 			// Some logic
 			// Calling the function:
