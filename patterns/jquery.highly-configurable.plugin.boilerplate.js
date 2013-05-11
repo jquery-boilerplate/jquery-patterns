@@ -21,13 +21,13 @@
       // to support customization of the plugin on a per-element
       // basis. For example,
       // <div class=item' data-plugin-options='{"message":"Goodbye World!"}'></div>
-      this.metadata = this.$elem.data( 'plugin-options' );
+      this.metadata = this.$elem.data( "plugin-options" );
     };
 
   // the plugin prototype
   Plugin.prototype = {
     defaults: {
-      message: 'Hello world!'
+      message: "Hello world!"
     },
 
     init: function() {

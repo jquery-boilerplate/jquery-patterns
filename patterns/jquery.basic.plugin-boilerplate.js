@@ -24,7 +24,7 @@
     // regularly referenced in your plugin).
 
     // Create the defaults once
-    var pluginName = 'defaultPluginName',
+    var pluginName = "defaultPluginName",
         defaults = {
             propertyName: "value"
         };
@@ -66,8 +66,8 @@
     // preventing against multiple instantiations
     $.fn[pluginName] = function ( options ) {
         return this.each(function () {
-            if (!$.data(this, 'plugin_' + pluginName)) {
-                $.data(this, 'plugin_' + pluginName,
+            if (!$.data(this, "plugin_" + pluginName)) {
+                $.data(this, "plugin_" + pluginName,
                 new Plugin( this, options ));
             }
         });

@@ -32,6 +32,6 @@
 		}
 	});
 })({
-	property : 'value',
-	otherProperty : 'value'
+	property : "value",
+	otherProperty : "value"
 }, jQuery, window, document);

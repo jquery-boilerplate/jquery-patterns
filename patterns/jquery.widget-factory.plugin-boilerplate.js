@@ -52,12 +52,12 @@
             // [uiObject] )
             // eg. this._trigger( "hover", e /*where e.type ==
             // "mouseenter"*/, { hovered: $(e.target)});
-            console.log('methodB called');
+            console.log("methodB called");
         },
 
         methodA: function ( event ) {
-            this._trigger('dataChanged', event, {
-                key: 'someValue'
+            this._trigger("dataChanged", event, {
+                key: "someValue"
             });
         },
 

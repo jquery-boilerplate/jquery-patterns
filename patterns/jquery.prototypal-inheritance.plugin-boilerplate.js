@@ -32,13 +32,13 @@ var myObject = {
   myMethod: function( msg ){
     // You have direct access to the associated and cached
     // jQuery element
-    console.log('myMethod triggered');
+    console.log("myMethod triggered");
     // this.$elem.append('<p>'+msg+'</p>');
   }
 };
 
 // Object.create support test, and fallback for browsers without it
-if ( typeof Object.create !== 'function' ) {
+if ( typeof Object.create !== "function" ) {
     Object.create = function (o) {
         function F() {}
         F.prototype = o;

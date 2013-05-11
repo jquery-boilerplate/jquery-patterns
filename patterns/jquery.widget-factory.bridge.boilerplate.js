@@ -62,12 +62,12 @@ widgetName.prototype = {
 
     // notice no underscore is used for public methods
     publicFunction: function(){
-        console.log('public function');
+        console.log("public function");
     },
 
     // underscores are used for private methods
     _privateFunction: function(){
-        console.log('private function');
+        console.log("private function");
     }
 };
 

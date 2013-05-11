@@ -2,8 +2,8 @@
 
 (function ( name, definition ) {
     var theModule = definition(),
-        hasDefine = typeof define === 'function',
-        hasExports = typeof module !== 'undefined' && module.exports;
+        hasDefine = typeof define === "function",
+        hasExports = typeof module !== "undefined" && module.exports;
 
     if ( hasDefine ) { // AMD Module
         define(theModule);
@@ -26,7 +26,7 @@
         }
 
     }
-})('core.plugin', function () {
+})("core.plugin", function () {
 
     // Define your module here and return the public API.
     // This code could be easily adapted with the core to
@@ -34,7 +34,7 @@
     // in order to expand the highlight method to do more if you wish.
     return {
         setGreen: function ( el ) {
-            highlight(el, 'green');
+            highlight(el, "green");
         },
         setRed: function ( el ) {
             highlight(el, errorColor);

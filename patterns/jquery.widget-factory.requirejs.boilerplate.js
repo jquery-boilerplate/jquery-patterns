@@ -61,12 +61,12 @@ define(["jquery", "jqueryui"], function ($) {
             // subscribe to
             //signature: _trigger( "callbackName" , [eventObject],
             // [uiObject] )
-            console.log('methodB called');
+            console.log("methodB called");
         },
 
         methodA: function ( event ) {
-            this._trigger('dataChanged', event, {
-                key: 'someValue'
+            this._trigger("dataChanged", event, {
+                key: "someValue"
             });
         },
 

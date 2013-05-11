@@ -11,9 +11,9 @@
 (function ( name, definition ){
   var theModule = definition(),
       // this is considered "safe":
-      hasDefine = typeof define === 'function' && define.amd,
-      // hasDefine = typeof define === 'function',
-      hasExports = typeof module !== 'undefined' && module.exports;
+      hasDefine = typeof define === "function" && define.amd,
+      // hasDefine = typeof define === "function",
+      hasExports = typeof module !== "undefined" && module.exports;
 
   if ( hasDefine ){ // AMD Module
     define(theModule);
@@ -22,7 +22,7 @@
   } else { // Assign to common namespaces or simply the global object (window)
     (this.jQuery || this.ender || this.$ || this)[name] = theModule;
   }
-})( 'core', function () {
+})( "core", function () {
     var module = this;
     module.plugins = [];
     module.highlightColor = "yellow";
@@ -35,12 +35,12 @@
   // colors
   module.highlight = function(el,strColor){
     if(this.jQuery){
-      jQuery(el).css('background', strColor);
+      jQuery(el).css("background", strColor);
     }
   }
   return {
       highlightAll:function(){
-        module.highlight('div', module.highlightColor);
+        module.highlight("div", module.highlightColor);
       }
   };
 
