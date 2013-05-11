@@ -13,9 +13,9 @@
 // - jquery-ui.custom.min.js (custom jQuery UI build with widget factory)
 // - templates/
 //    - asset.html
-// - ao.myWidget.js 
+// - ao.myWidget.js
 
-// Then you can construct the widget like so: 
+// Then you can construct the widget like so:
 
 // ao.myWidget.js file:
 // Uncomment this version for a sample using templates
@@ -24,10 +24,10 @@ define(["jquery", "jqueryui"], function ($) {
 
     // define your widget under a namespace of your choice
     // 'ao' is used here as a demonstration
-    $.widget( "ao.myWidget", { 
+    $.widget( "ao.myWidget", {
 
         // Options to be used as defaults
-        options: {}, 
+        options: {},
 
         // Set up widget (e.g. create element, apply theming,
         // bind events, etc.)
@@ -91,7 +91,7 @@ define(["jquery", "jqueryui"], function ($) {
         //somewhere assetHtml would be used for templating, depending
         // on your choice.
     });
-}); 
+});
 
 // If you are going to use the RequireJS optimizer to combine files
 // together, you can leave off the "ao.myWidget" argument to define:

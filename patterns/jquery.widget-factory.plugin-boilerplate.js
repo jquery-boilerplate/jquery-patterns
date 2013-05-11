@@ -11,7 +11,7 @@
     //  with additional parameters e.g.
     // $.widget( "namespace.widgetname", (optional) - an
     // existing widget prototype to inherit from, an object
-    // literal to become the widget's prototype ); 
+    // literal to become the widget's prototype );
 
     $.widget( "namespace.widgetName" , {
 
