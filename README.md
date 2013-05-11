@@ -1,6 +1,6 @@
-## Recommended jQuery Plugin Patterns [![Build Status](https://secure.travis-ci.org/jquery-boilerplate/patterns.png?branch=master)](https://travis-ci.org/jquery-boilerplate/patterns)
+# Recommended jQuery Plugin Patterns [![Build Status](https://secure.travis-ci.org/jquery-boilerplate/patterns.png?branch=master)](https://travis-ci.org/jquery-boilerplate/patterns)
 
-### Introduction
+## Introduction
 
 So, you've tried out [jQuery Boilerplate](https://github.com/jquery-boilerplate/boilerplate) or written a few of your own plugins before. They work to a degree and are readable, but you're interesting in learning if there a better ways your plugin can be structured.
 
@@ -8,7 +8,7 @@ Perhaps you're just looking for something that works better with the jQuery UI W
 
 This project won't seek to provide implementations for every possible pattern, but will attempt to cover popular patterns developers often use in the wild.
 
-### Patterns
+## Patterns
 
 -   **[A lightweight start](https://github.com/jquery-boilerplate/patterns/blob/master/patterns/jquery.basic.plugin-boilerplate.js)**: perfect as a generic template for beginners
     and above, uses a basic defaults object, simple constructor for
@@ -47,11 +47,11 @@ This project won't seek to provide implementations for every possible pattern, b
     different script loaders. You may also be interested in the [UMD](https://github.com/umdjs) project.
 
 
-### Further reading:
+## Further reading:
 
 More information about the patterns in this repo can be found in [Learning JavaScript Design Patterns](http://addyosmani.com/resources/essentialjsdesignpatterns/book/#jquerypluginpatterns).
 
-### Contributing
+## Contributing
 
 If you have ideas for improvements that can be made to patterns currently in the repo, please feel free to create a new issue for discussion or send a pull request upstream. The same can be said about new patterns you wish to propose being added; for the sake of limiting confusion and complexity, I would ideally like to keep the number of overall patterns in the repo, but there are plans to separate these out into folders based on concerns.
 
@@ -63,7 +63,7 @@ jQuery Patterns was made with love by these people and a bunch of awesome [contr
 --- | --- | --- | --- | --- | --- | ---
 [Addy Osmani](http://addyosmani.com) | [Zeno Rocha](http://zenorocha.com)
 
-### Credits
+## Credits
 
 Thanks to [@peol](http://github.com/peol), [@ajpiano](http://github.com/ajpiano), [@mathias](http://github.com/mathias), [@cowboy](http://github.com/cowboy), [@dougneiner](http://github.com/dougneiner) and others for their previous work (or tips) in this area. Some of this work is used as a basis for further improvements.
 
