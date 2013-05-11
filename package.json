@@ -1,0 +1,16 @@
+{
+	"name": "jquery-patterns",
+	"title": "jQuery Patterns",
+	"description": "A variety of jQuery plugin patterns for jump starting your plugin development.",
+	"author": "Addy Osmani",
+	"homepage": "https://github.com/jquery-boilerplate/patterns/",
+	"version": "0.1.0",
+	"devDependencies": {
+		"grunt": "~0.4.1",
+		"grunt-cli": "~0.1.7",
+		"grunt-contrib-jshint": "~0.4.3"
+	},
+	"scripts": {
+		"test": "grunt travis --verbose"
+	}
+}
