@@ -45,7 +45,7 @@ This project won't seek to provide implementations for every possible pattern, b
     different script loaders. You may also be interested in the [UMD](https://github.com/umdjs) project.
 
 
-## Further reading:
+## Further reading
 
 More information about the patterns in this repo can be found in [Learning JavaScript Design Patterns](http://addyosmani.com/resources/essentialjsdesignpatterns/book/#jquerypluginpatterns).
 
