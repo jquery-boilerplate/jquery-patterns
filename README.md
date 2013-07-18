@@ -44,6 +44,9 @@ This project won't seek to provide implementations for every possible pattern, b
     compatible plugin modules which are compatible with a number of
     different script loaders. You may also be interested in the [UMD](https://github.com/umdjs) project.
 
+-   **[Simple and Organized pattern](https://github.com/jquery-boilerplate/patterns/blob/master/patterns/jquery.simple.plugin-boilerplate.js)**: Simple and organized.
+The variables, DOM elements, methods and events were separated.
+
 
 ## Further reading
 
