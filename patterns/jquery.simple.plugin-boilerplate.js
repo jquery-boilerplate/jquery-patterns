@@ -2,7 +2,7 @@
 * Plugin Authoring
 *
 * Simple and organized
-* The variables, DOMS elements, methods and events were separated
+* The variables, DOM elements, methods and events were separated
 * @author Richard Santos <richaardsantos@gmail.com>
 * 
 **/
@@ -14,21 +14,20 @@
 
         // Default options
         var options = $.extend( {
-            'option1' : 'value1',
-            'option2' : 'value2'
+            "option1" : "value1",
+            "option2" : "value2"
         }, params);
 
         // Plugin variables
-        var myVarOne = 'simple';
+        var myVarOne = "simple";
 
-        var myVarTwo = 'organized';
+        var myVarTwo = "organized";
 
         // Put your DOM elements here
         var elements = {
-            $body  : $('body'),
+            $body  : $("body"),
             win   : window
         };
-
 
         // Plugin methods
         var methods = {
@@ -54,7 +53,7 @@
 
             yourEvent : function() {
                 
-                elements.$body.html( 'Hey man, it is working! Here option1: ' + methods.getOptions('option1') );
+                elements.$body.html( "Hey man, it is working! Here option1: " + methods.getOptions("option1") );
 
                 return this;
 
@@ -71,6 +70,3 @@
     };
 
 })( jQuery );
-
-// calling plugin
-// $(document).pluginName();
