@@ -32,7 +32,7 @@ This project won't seek to provide implementations for every possible pattern, b
 -   **[Custom events (Publish/Subscribe)](https://github.com/jquery-boilerplate/patterns/blob/master/patterns/jquery.customevents.plugin-boilerplate.js)**: for better application
     decoupling. Uses the Widget factory, but could be applied to the
     generic template
--   **[Extend pattern](https://github.com/jquery-boilerplate/patterns/blob/master/patterns/jquery.extend-skeleton.plugin-boilerplate.js)**: Extended options
+-   **[Extend pattern](https://github.com/jquery-boilerplate/jquery-patterns/blob/master/patterns/jquery.extend-skeleton.js)**: Extended options
 -   **[Non Widget-factory widget](https://github.com/jquery-boilerplate/patterns/blob/master/patterns/jquery.simplewidget.plugin-boilerplate.js])**: if you wish to stay away from the
     widget factory. Uses Ben Alman’s simplewidget including coverage for
     creation, instantiation and other best practices that may be helpful
