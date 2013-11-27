@@ -48,6 +48,12 @@ if ( typeof Object.create !== "function" ) {
 
 // Create a plugin based on a defined object
 $.plugin = function( name, object ) {
+  
+  // Interface to extend default options
+  $[name] = function (options) {
+    $.extend(object.options, options);
+  };
+
   $.fn[name] = function( options ) {
     return this.each(function() {
       if ( ! $.data( this, name ) ) {
