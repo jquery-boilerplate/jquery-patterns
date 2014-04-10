@@ -1,4 +1,4 @@
-# jQuery Plugin Patterns [![Build Status](https://secure.travis-ci.org/jquery-boilerplate/jquery-patterns.png?branch=master)](https://travis-ci.org/jquery-boilerplate/jquery-patterns)
+# jQuery Plugin Patterns [![Build Status](https://secure.travis-ci.org/jquery-boilerplate/jquery-patterns.svg?branch=master)](https://travis-ci.org/jquery-boilerplate/jquery-patterns)
 
 So, you've tried out [jQuery Boilerplate](https://github.com/jquery-boilerplate/jquery-boilerplate) or written a few of your own plugins before. They work to a degree and are readable, but you're interested in learning if there are better ways your plugin can be structured.
 
