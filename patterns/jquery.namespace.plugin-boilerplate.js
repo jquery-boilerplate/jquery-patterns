@@ -8,7 +8,7 @@
 ;(function ( $ ) {
     if (!$.myNamespace) {
         $.myNamespace = {};
-    };
+    }
 
     $.myNamespace.myPluginName = function ( el, myFunctionParam, options ) {
         // To avoid scope issues, use 'base' instead of 'this'
