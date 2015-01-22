@@ -56,14 +56,35 @@ Just like in Idiomatic JavaScript Style Manifesto we will summarize some example
 
 1.1. AMD compatible factory
 
+If you use stricly jQuery loaded by RequireJS you can do this:
+
 ```javascript
 
     // the usual definition how to define a RequireJs compatible module
     define(["jquery", "jqueryui"], function ($) {
-      // your code here
-    });
 
-1.2. A factory which can do AMD and CommonJS, but musn't
+      $.fn.extend({
+      
+        pluginName: function( options ) {
+
+          this.defaultOptions = {};
+
+          var settings = $.extend({}, this.defaultOptions, options);
+
+          return this.each(function() {
+            var $this = $(this);
+          });
+          
+        }
+        
+      });
+      
+    });
+```
+
+1.2. AMD and CommonJS compatible module factory
+
+But if you want to use your modules also in other projects, where RequireJS is not available, you can add this factory pattern to provide your module 
 
 ```javascript
 
@@ -79,10 +100,26 @@ Just like in Idiomatic JavaScript Style Manifesto we will summarize some example
         // Browser globals
         factory(jQuery);
       }
-   }(function ($, window, document){
+    }(function ($, window, document){
    
-     // write your module ...
-   
+      $.fn.extend({
+      
+        pluginName: function( options ) {
+
+          this.defaultOptions = {};
+
+          var settings = $.extend({}, this.defaultOptions, options);
+
+          return this.each(function() {
+            var $this = $(this);
+          });
+          
+        }
+        
+    });
+
+});
+
    }(jQuery)));
 ```
     
