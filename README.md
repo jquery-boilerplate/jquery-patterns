@@ -89,7 +89,9 @@ But if you want to use your modules also in other projects, where RequireJS is n
 ```javascript
 
     // Examples of a AMD and CommonJS compatible module with a prefaced factory
-    (function (factory) {
+    // Hint: The semi-colon before the function invocation is a safety net against 
+    // concatenated scripts and/or other plugins that are not closed properly.
+    ;(function (factory) {
       if (typeof define === 'function' && define.amd) {
         // AMD
         define(['jquery'], factory);
