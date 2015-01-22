@@ -44,7 +44,87 @@ This project won't seek to provide implementations for every possible pattern, b
     compatible plugin modules which are compatible with a number of
     different script loaders. You may also be interested in the [UMD](https://github.com/umdjs) project.
 
+## Principles of Writing Consistent, Idiomatic JavaScript
 
+You may checkout this link (https://github.com/rwaldron/idiomatic.js)
+
+### Style Manifesto for jQueryfied Modules
+
+Just like in Idiomatic JavaScript Style Manifesto we will summarize some examples, how you can build up your JavaScript or better jQuery modules.
+
+1. Module/Constructor/Factories
+
+1.1. AMD compatible factory
+
+If you use stricly jQuery loaded by RequireJS you can do this:
+
+```javascript
+
+    // the usual definition how to define a RequireJs compatible module
+    define(["jquery", "jqueryui"], function ($) {
+
+      $.fn.extend({
+      
+        pluginName: function( options ) {
+
+          this.defaultOptions = {};
+
+          var settings = $.extend({}, this.defaultOptions, options);
+
+          return this.each(function() {
+            var $this = $(this);
+          });
+          
+        }
+        
+      });
+      
+    });
+```
+
+1.2. AMD and CommonJS compatible module factory
+
+But if you want to use your modules also in other projects, where RequireJS is not available, you can add this factory pattern to provide your module 
+
+```javascript
+
+    // Examples of a AMD and CommonJS compatible module with a prefaced factory
+    // Hint: The semi-colon before the function invocation is a safety net against 
+    // concatenated scripts and/or other plugins that are not closed properly.
+    ;(function (factory) {
+      if (typeof define === 'function' && define.amd) {
+        // AMD
+        define(['jquery'], factory);
+      } else if (typeof exports === 'object') {
+        // CommonJS
+       factory(require('jquery'));
+      } else {
+        // Browser globals
+        factory(jQuery);
+      }
+    }(function ($, window, document){
+   
+      $.fn.extend({
+      
+        pluginName: function( options ) {
+
+          this.defaultOptions = {};
+
+          var settings = $.extend({}, this.defaultOptions, options);
+
+          return this.each(function() {
+            var $this = $(this);
+          });
+          
+        }
+        
+    });
+
+  });
+
+}()));
+```
+    
 ## Further reading
 
 More information about the patterns in this repo can be found in [Learning JavaScript Design Patterns](http://addyosmani.com/resources/essentialjsdesignpatterns/book/#jquerypluginpatterns).
