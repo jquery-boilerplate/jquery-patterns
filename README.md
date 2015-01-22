@@ -52,7 +52,18 @@ You may checkout this link (https://github.com/rwaldron/idiomatic.js)
 
 Just like in Idiomatic JavaScript Style Manifesto we will summarize some examples, how you can build up your JavaScript or better jQuery modules.
 
-1. Module/Constructor/Factory
+1. Module/Constructor/Factories
+
+1.1. AMD compatible factory
+
+```javascript
+
+    // the usual definition how to define a RequireJs compatible module
+    define(["jquery", "jqueryui"], function ($) {
+      // your code here
+    });
+
+1.2. A factory which can do AMD and CommonJS, but musn't
 
 ```javascript
 
