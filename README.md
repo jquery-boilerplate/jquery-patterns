@@ -120,9 +120,9 @@ But if you want to use your modules also in other projects, where RequireJS is n
         
     });
 
-});
+  });
 
-   }(jQuery)));
+}()));
 ```
     
 ## Further reading
