@@ -66,10 +66,20 @@
     // preventing against multiple instantiations
     $.fn[pluginName] = function ( options ) {
         return this.each(function () {
+            var instance;
+            
             if (!$.data(this, "plugin_" + pluginName)) {
                 $.data(this, "plugin_" + pluginName,
                 new Plugin( this, options ));
             }
+            
+            //Access plugin methods via $el.pluginName("methodName")
+            instance = $.data(this, "plugin_" + pluginName);
+            
+            if(typeof instance[ options ] === "function"){
+				instance[ options ]();
+			}
+            
         });
     };
 
